@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GymAdmin));
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.PanelActive = new System.Windows.Forms.Panel();
             this.BtnPocetna = new System.Windows.Forms.Button();
             this.BtnClanarine = new System.Windows.Forms.Button();
             this.BtnMjerenja = new System.Windows.Forms.Button();
             this.BtnZaposlenici = new System.Windows.Forms.Button();
             this.BtnKlijenti = new System.Windows.Forms.Button();
             this.PanelKlijenti = new System.Windows.Forms.Panel();
-            this.BtnDodajKlijenti = new System.Windows.Forms.Button();
-            this.BtnIzbrisiKlijenti = new System.Windows.Forms.Button();
-            this.BtnUrediKlijenti = new System.Windows.Forms.Button();
-            this.DGVklijenti = new System.Windows.Forms.DataGridView();
-            this.TxtPretrazivanjeKlijenti = new System.Windows.Forms.TextBox();
-            this.BtnPretraziKlijenti = new System.Windows.Forms.Button();
             this.LblKlijenti = new System.Windows.Forms.Label();
-            this.PanelActive = new System.Windows.Forms.Panel();
+            this.BtnPretraziKlijenti = new System.Windows.Forms.Button();
+            this.TxtPretrazivanjeKlijenti = new System.Windows.Forms.TextBox();
+            this.DGVklijenti = new System.Windows.Forms.DataGridView();
+            this.BtnUrediKlijenti = new System.Windows.Forms.Button();
+            this.BtnIzbrisiKlijenti = new System.Windows.Forms.Button();
+            this.BtnDodajKlijenti = new System.Windows.Forms.Button();
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVklijenti)).BeginInit();
@@ -63,6 +63,17 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(184, 461);
             this.PanelMenu.TabIndex = 0;
+            // 
+            // PanelActive
+            // 
+            this.PanelActive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PanelActive.Location = new System.Drawing.Point(174, 69);
+            this.PanelActive.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelActive.Name = "PanelActive";
+            this.PanelActive.Size = new System.Drawing.Size(10, 69);
+            this.PanelActive.TabIndex = 21;
             // 
             // BtnPocetna
             // 
@@ -187,75 +198,14 @@
             this.PanelKlijenti.Size = new System.Drawing.Size(800, 461);
             this.PanelKlijenti.TabIndex = 23;
             // 
-            // BtnDodajKlijenti
+            // LblKlijenti
             // 
-            this.BtnDodajKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDodajKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
-            this.BtnDodajKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnDodajKlijenti.FlatAppearance.BorderSize = 0;
-            this.BtnDodajKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDodajKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDodajKlijenti.Location = new System.Drawing.Point(334, 306);
-            this.BtnDodajKlijenti.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnDodajKlijenti.Name = "BtnDodajKlijenti";
-            this.BtnDodajKlijenti.Size = new System.Drawing.Size(139, 29);
-            this.BtnDodajKlijenti.TabIndex = 19;
-            this.BtnDodajKlijenti.Text = "Dodaj novog";
-            this.BtnDodajKlijenti.UseVisualStyleBackColor = false;
-            // 
-            // BtnIzbrisiKlijenti
-            // 
-            this.BtnIzbrisiKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnIzbrisiKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
-            this.BtnIzbrisiKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnIzbrisiKlijenti.FlatAppearance.BorderSize = 0;
-            this.BtnIzbrisiKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIzbrisiKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnIzbrisiKlijenti.Location = new System.Drawing.Point(489, 306);
-            this.BtnIzbrisiKlijenti.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnIzbrisiKlijenti.Name = "BtnIzbrisiKlijenti";
-            this.BtnIzbrisiKlijenti.Size = new System.Drawing.Size(139, 29);
-            this.BtnIzbrisiKlijenti.TabIndex = 20;
-            this.BtnIzbrisiKlijenti.Text = "Izbriši";
-            this.BtnIzbrisiKlijenti.UseVisualStyleBackColor = false;
-            // 
-            // BtnUrediKlijenti
-            // 
-            this.BtnUrediKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnUrediKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
-            this.BtnUrediKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnUrediKlijenti.FlatAppearance.BorderSize = 0;
-            this.BtnUrediKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUrediKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnUrediKlijenti.Location = new System.Drawing.Point(646, 306);
-            this.BtnUrediKlijenti.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnUrediKlijenti.Name = "BtnUrediKlijenti";
-            this.BtnUrediKlijenti.Size = new System.Drawing.Size(139, 29);
-            this.BtnUrediKlijenti.TabIndex = 21;
-            this.BtnUrediKlijenti.Text = "Uredi";
-            this.BtnUrediKlijenti.UseVisualStyleBackColor = false;
-            // 
-            // DGVklijenti
-            // 
-            this.DGVklijenti.AllowUserToOrderColumns = true;
-            this.DGVklijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGVklijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVklijenti.Location = new System.Drawing.Point(15, 62);
-            this.DGVklijenti.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
-            this.DGVklijenti.Name = "DGVklijenti";
-            this.DGVklijenti.Size = new System.Drawing.Size(770, 232);
-            this.DGVklijenti.TabIndex = 17;
-            // 
-            // TxtPretrazivanjeKlijenti
-            // 
-            this.TxtPretrazivanjeKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtPretrazivanjeKlijenti.Location = new System.Drawing.Point(336, 20);
-            this.TxtPretrazivanjeKlijenti.Margin = new System.Windows.Forms.Padding(0);
-            this.TxtPretrazivanjeKlijenti.Name = "TxtPretrazivanjeKlijenti";
-            this.TxtPretrazivanjeKlijenti.Size = new System.Drawing.Size(300, 29);
-            this.TxtPretrazivanjeKlijenti.TabIndex = 18;
+            this.LblKlijenti.AutoSize = true;
+            this.LblKlijenti.Location = new System.Drawing.Point(11, 38);
+            this.LblKlijenti.Name = "LblKlijenti";
+            this.LblKlijenti.Size = new System.Drawing.Size(57, 21);
+            this.LblKlijenti.TabIndex = 22;
+            this.LblKlijenti.Text = "Klijenti";
             // 
             // BtnPretraziKlijenti
             // 
@@ -273,25 +223,75 @@
             this.BtnPretraziKlijenti.Text = "Pretraži";
             this.BtnPretraziKlijenti.UseVisualStyleBackColor = false;
             // 
-            // LblKlijenti
+            // TxtPretrazivanjeKlijenti
             // 
-            this.LblKlijenti.AutoSize = true;
-            this.LblKlijenti.Location = new System.Drawing.Point(11, 38);
-            this.LblKlijenti.Name = "LblKlijenti";
-            this.LblKlijenti.Size = new System.Drawing.Size(57, 21);
-            this.LblKlijenti.TabIndex = 22;
-            this.LblKlijenti.Text = "Klijenti";
+            this.TxtPretrazivanjeKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtPretrazivanjeKlijenti.Location = new System.Drawing.Point(336, 20);
+            this.TxtPretrazivanjeKlijenti.Margin = new System.Windows.Forms.Padding(0);
+            this.TxtPretrazivanjeKlijenti.Name = "TxtPretrazivanjeKlijenti";
+            this.TxtPretrazivanjeKlijenti.Size = new System.Drawing.Size(300, 29);
+            this.TxtPretrazivanjeKlijenti.TabIndex = 18;
             // 
-            // PanelActive
+            // DGVklijenti
             // 
-            this.PanelActive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGVklijenti.AllowUserToOrderColumns = true;
+            this.DGVklijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PanelActive.Location = new System.Drawing.Point(174, 0);
-            this.PanelActive.Margin = new System.Windows.Forms.Padding(0);
-            this.PanelActive.Name = "PanelActive";
-            this.PanelActive.Size = new System.Drawing.Size(10, 69);
-            this.PanelActive.TabIndex = 21;
+            this.DGVklijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVklijenti.Location = new System.Drawing.Point(15, 62);
+            this.DGVklijenti.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
+            this.DGVklijenti.Name = "DGVklijenti";
+            this.DGVklijenti.Size = new System.Drawing.Size(770, 232);
+            this.DGVklijenti.TabIndex = 17;
+            // 
+            // BtnUrediKlijenti
+            // 
+            this.BtnUrediKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnUrediKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.BtnUrediKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnUrediKlijenti.FlatAppearance.BorderSize = 0;
+            this.BtnUrediKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUrediKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnUrediKlijenti.Location = new System.Drawing.Point(646, 306);
+            this.BtnUrediKlijenti.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnUrediKlijenti.Name = "BtnUrediKlijenti";
+            this.BtnUrediKlijenti.Size = new System.Drawing.Size(139, 29);
+            this.BtnUrediKlijenti.TabIndex = 21;
+            this.BtnUrediKlijenti.Text = "Uredi";
+            this.BtnUrediKlijenti.UseVisualStyleBackColor = false;
+            // 
+            // BtnIzbrisiKlijenti
+            // 
+            this.BtnIzbrisiKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnIzbrisiKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.BtnIzbrisiKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnIzbrisiKlijenti.FlatAppearance.BorderSize = 0;
+            this.BtnIzbrisiKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIzbrisiKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnIzbrisiKlijenti.Location = new System.Drawing.Point(489, 306);
+            this.BtnIzbrisiKlijenti.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnIzbrisiKlijenti.Name = "BtnIzbrisiKlijenti";
+            this.BtnIzbrisiKlijenti.Size = new System.Drawing.Size(139, 29);
+            this.BtnIzbrisiKlijenti.TabIndex = 20;
+            this.BtnIzbrisiKlijenti.Text = "Izbriši";
+            this.BtnIzbrisiKlijenti.UseVisualStyleBackColor = false;
+            // 
+            // BtnDodajKlijenti
+            // 
+            this.BtnDodajKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDodajKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.BtnDodajKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDodajKlijenti.FlatAppearance.BorderSize = 0;
+            this.BtnDodajKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDodajKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnDodajKlijenti.Location = new System.Drawing.Point(334, 306);
+            this.BtnDodajKlijenti.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnDodajKlijenti.Name = "BtnDodajKlijenti";
+            this.BtnDodajKlijenti.Size = new System.Drawing.Size(139, 29);
+            this.BtnDodajKlijenti.TabIndex = 19;
+            this.BtnDodajKlijenti.Text = "Dodaj novog";
+            this.BtnDodajKlijenti.UseVisualStyleBackColor = false;
             // 
             // GymAdmin
             // 
