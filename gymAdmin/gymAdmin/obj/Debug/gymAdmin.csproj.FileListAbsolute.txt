@@ -1,0 +1,10 @@
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\bin\Debug\gymAdmin.exe.config
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\bin\Debug\gymAdmin.exe
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\bin\Debug\gymAdmin.pdb
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.csprojAssemblyReference.cache
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.Properties.Resources.resources
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.csproj.GenerateResource.cache
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.csproj.CoreCompileInputs.cache
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.exe
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.pdb
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.GymAdmin.resources
