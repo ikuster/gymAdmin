@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace gymAdmin
 {
-    class Mjerenje
+    public class Mjerenje
     {
         public float Visina { get; set; }
         public float Tezina { get; set; }
         public float BMI { get; set; }
+
         public Mjerenje(float visina, float tezina)
         {
             this.Visina = visina;

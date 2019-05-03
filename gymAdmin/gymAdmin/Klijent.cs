@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace gymAdmin
 {
-    class Klijent
+    public class Klijent : Osoba
     {
         public int IdKlijent { get; set; }
         public DateTime VrijemeUclanjenja { get; set; }

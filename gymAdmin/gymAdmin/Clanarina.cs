@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace gymAdmin
 {
-    class Clanarina
+    public class Clanarina
     {
         public int IdClanarina { get; set; }
         public string Naziv { get; set; }
         public string Opis { get; set; }
         public float Cijena { get; set; }
         public int Trajanje { get; set; }
+
         public Clanarina(string naziv, string opis, float cijena, int trajanje)
         {
             this.Naziv = naziv;

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace gymAdmin
 {
-    class KlijentiRepozitorij
+    public class KlijentiRepozitorij
     {
         public static List<Klijent> Klijenti {get; set;}
+
         public void DodajNovog(Klijent klijent)
         {
             Klijenti.Add(klijent);
