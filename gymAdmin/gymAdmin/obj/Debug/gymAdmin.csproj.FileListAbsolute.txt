@@ -8,3 +8,7 @@ C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.csp
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.exe
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.pdb
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.GymAdmin.resources
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.NoviClan.resources
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.PotvrdaBrisanja.resources
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.Mjerenja.resources
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin\gymAdmin\obj\Debug\gymAdmin.DetaljiKlijent.resources

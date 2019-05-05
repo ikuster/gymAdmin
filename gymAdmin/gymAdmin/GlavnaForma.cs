@@ -63,5 +63,29 @@ namespace gymAdmin
         {
             PanelActive.Location = new System.Drawing.Point(174, 207);
         }
+
+        private void BtnDodajKlijenti_Click(object sender, EventArgs e)
+        {
+            NoviClan noviClan = new NoviClan();
+            noviClan.Show();
+        }
+
+        private void BtnIzbrisiKlijenti_Click(object sender, EventArgs e)
+        {
+            PotvrdaBrisanja formaBrisanje = new PotvrdaBrisanja();
+            formaBrisanje.Show();
+        }
+
+        private void BtnMjerenjaKlijenti_Click(object sender, EventArgs e)
+        {
+            Mjerenja formMjerenja = new Mjerenja();
+            formMjerenja.Show();
+        }
+
+        private void BtnDetaljnoKlijenti_Click(object sender, EventArgs e)
+        {
+            DetaljiKlijent formaDetaljiKlijent = new DetaljiKlijent();
+            formaDetaljiKlijent.Show();
+        }
     }
 } 

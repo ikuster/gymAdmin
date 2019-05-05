@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clanarina.cs" />
+    <Compile Include="DetaljiKlijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaljiKlijent.Designer.cs">
+      <DependentUpon>DetaljiKlijent.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlavnaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,13 +61,43 @@
     </Compile>
     <Compile Include="Klijent.cs" />
     <Compile Include="KlijentiRepozitorij.cs" />
+    <Compile Include="Mjerenja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mjerenja.Designer.cs">
+      <DependentUpon>Mjerenja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mjerenje.cs" />
+    <Compile Include="NoviClan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoviClan.Designer.cs">
+      <DependentUpon>NoviClan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Osoba.cs" />
+    <Compile Include="PotvrdaBrisanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PotvrdaBrisanja.Designer.cs">
+      <DependentUpon>PotvrdaBrisanja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Zaposlenik.cs" />
+    <EmbeddedResource Include="DetaljiKlijent.resx">
+      <DependentUpon>DetaljiKlijent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mjerenja.resx">
+      <DependentUpon>Mjerenja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoviClan.resx">
+      <DependentUpon>NoviClan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PotvrdaBrisanja.resx">
+      <DependentUpon>PotvrdaBrisanja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
