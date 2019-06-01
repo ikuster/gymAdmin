@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clanarina">
+    <Key>
+      <PropertyRef Name="Id_Clanarina" />
+    </Key>
+    <Property Name="Id_Clanarina" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Opis" Type="text" />
+    <Property Name="Trajanje" Type="int" Nullable="false" />
+    <Property Name="Cijena" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klijent">
+    <Key>
+      <PropertyRef Name="Id_Klijent" />
+    </Key>
+    <Property Name="Id_Klijent" Type="int" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Spol" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Broj_mobitela" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Datum_uclanjenja" Type="date" Nullable="false" />
+    <Property Name="Id_Clanarina" Type="int" />
+    <Property Name="Datum_isteka_clanarine" Type="date" />
+  </EntityType>
+  <EntityType Name="Mjerenje">
+    <Key>
+      <PropertyRef Name="Id_Mjerenje" />
+    </Key>
+    <Property Name="Id_Mjerenje" Type="int" Nullable="false" />
+    <Property Name="Visina" Type="float" Nullable="false" />
+    <Property Name="Tezina" Type="float" Nullable="false" />
+    <Property Name="Datum_mjerenja" Type="date" Nullable="false" />
+    <Property Name="Id_Klijent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vrsta_zaposlenika">
+    <Key>
+      <PropertyRef Name="Id_VrstaZaposlenika" />
+    </Key>
+    <Property Name="Id_VrstaZaposlenika" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zaposlenik">
+    <Key>
+      <PropertyRef Name="Id_Zaposlenik" />
+    </Key>
+    <Property Name="Id_Zaposlenik" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Korisnicko_ime" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Lozinka" Type="varchar" MaxLength="90" Nullable="false" />
+    <Property Name="Spol" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Broj_mobitela" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OIB" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Datum_zaposlenja" Type="date" Nullable="false" />
+    <Property Name="Id_VrstaZaposlenika" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Clanarina_Clanarina">
+    <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="1" />
+    <End Role="Clanarina1" Type="Self.Clanarina" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Clanarina">
+        <PropertyRef Name="Id_Clanarina" />
+      </Principal>
+      <Dependent Role="Clanarina1">
+        <PropertyRef Name="Id_Clanarina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Klijent_Clanarina">
+    <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="0..1" />
+    <End Role="Klijent" Type="Self.Klijent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clanarina">
+        <PropertyRef Name="Id_Clanarina" />
+      </Principal>
+      <Dependent Role="Klijent">
+        <PropertyRef Name="Id_Clanarina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mjerenje_Klijent">
+    <End Role="Klijent" Type="Self.Klijent" Multiplicity="1" />
+    <End Role="Mjerenje" Type="Self.Mjerenje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klijent">
+        <PropertyRef Name="Id_Klijent" />
+      </Principal>
+      <Dependent Role="Mjerenje">
+        <PropertyRef Name="Id_Klijent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zaposlenik_Vrsta_zaposlenika">
+    <End Role="Vrsta_zaposlenika" Type="Self.Vrsta_zaposlenika" Multiplicity="1" />
+    <End Role="Zaposlenik" Type="Self.Zaposlenik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vrsta_zaposlenika">
+        <PropertyRef Name="Id_VrstaZaposlenika" />
+      </Principal>
+      <Dependent Role="Zaposlenik">
+        <PropertyRef Name="Id_VrstaZaposlenika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBModelStoreContainer">
+    <EntitySet Name="Clanarina" EntityType="Self.Clanarina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klijent" EntityType="Self.Klijent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mjerenje" EntityType="Self.Mjerenje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vrsta_zaposlenika" EntityType="Self.Vrsta_zaposlenika" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zaposlenik" EntityType="Self.Zaposlenik" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Clanarina_Clanarina" Association="Self.FK_Clanarina_Clanarina">
+      <End Role="Clanarina" EntitySet="Clanarina" />
+      <End Role="Clanarina1" EntitySet="Clanarina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Klijent_Clanarina" Association="Self.FK_Klijent_Clanarina">
+      <End Role="Clanarina" EntitySet="Clanarina" />
+      <End Role="Klijent" EntitySet="Klijent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mjerenje_Klijent" Association="Self.FK_Mjerenje_Klijent">
+      <End Role="Klijent" EntitySet="Klijent" />
+      <End Role="Mjerenje" EntitySet="Mjerenje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zaposlenik_Vrsta_zaposlenika" Association="Self.FK_Zaposlenik_Vrsta_zaposlenika">
+      <End Role="Vrsta_zaposlenika" EntitySet="Vrsta_zaposlenika" />
+      <End Role="Zaposlenik" EntitySet="Zaposlenik" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
