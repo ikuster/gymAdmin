@@ -157,7 +157,6 @@
             this.Controls.Add(this.dgvZaposlenici);
             this.Name = "Zaposlenici";
             this.Text = "Zaposlenici";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Zaposlenici_FormClosing);
             this.Load += new System.EventHandler(this.Zaposlenici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             this.ResumeLayout(false);

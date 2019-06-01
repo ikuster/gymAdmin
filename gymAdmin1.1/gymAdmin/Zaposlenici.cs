@@ -65,10 +65,6 @@ namespace gymAdmin
             OsvjeziFormu();
         }
 
-        private void Zaposlenici_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            GymAdmin glavnaForma = new GymAdmin();
-            glavnaForma.Show();
-        }
+
     }
 }
