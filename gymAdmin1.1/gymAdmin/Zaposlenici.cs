@@ -52,7 +52,8 @@ namespace gymAdmin
             using(var baza=new Entities())
             {
                 var upitPretraga = from z in baza.Zaposlenik
-                                   where z.Prezime.Contains(textBoxPretraga.Text)
+                                   where z.Prezime.Contains(textBoxPretraga.Text) || 
+                                   z.Ime.Contains(textBoxPretraga.Text)
                                    select z;
                 dgvZaposlenici.DataSource = upitPretraga.ToList();
             }
@@ -65,6 +66,9 @@ namespace gymAdmin
             OsvjeziFormu();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -20,6 +20,17 @@ namespace gymAdmin
             return lozinka;
 
         }
+        private int ProvjeriPrijeDodavanja(string korIme)
+        {
+            int upitPostoji;
+            using (var baza=new Entities())
+            {
+                upitPostoji = (from z in baza.Zaposlenik
+                               where z.Korisnicko_ime == korIme
+                               select z).Count();
+            }
+            return upitPostoji;
+        }
         public int Autoriziraj(string korIme,string lozinka)
         {
             int provjeriPostojanje;
@@ -62,26 +73,40 @@ namespace gymAdmin
             kredencijali.Add(lozinka);
             return kredencijali;
         }
-        public void DodajUBazu(Zaposlenik noviZaposlenik)
+        public bool DodajUBazu(Zaposlenik noviZaposlenik)
         {
+            bool vecPostoji = false;
+            string lozinka = GenerirajHash(noviZaposlenik.Lozinka);
+            
 
             using(var baza = new Entities())
             {
-                Zaposlenik zaposlenik = new Zaposlenik {
-                    Ime = noviZaposlenik.Ime,
-                    Prezime = noviZaposlenik.Prezime,
-                    Korisnicko_ime = noviZaposlenik.Korisnicko_ime,
-                    Lozinka = GenerirajHash(noviZaposlenik.Lozinka),
-                    Spol = noviZaposlenik.Spol,
-                    Email=noviZaposlenik.Email,
-                    Broj_mobitela=noviZaposlenik.Broj_mobitela,
-                    OIB=noviZaposlenik.OIB,
-                    Datum_zaposlenja=noviZaposlenik.Datum_zaposlenja,
-                    Id_VrstaZaposlenika=noviZaposlenik.Id_VrstaZaposlenika
+                if (ProvjeriPrijeDodavanja(noviZaposlenik.Korisnicko_ime)==0) {
+
+                    Zaposlenik zaposlenik = new Zaposlenik
+                    {
+                        Ime = noviZaposlenik.Ime,
+                        Prezime = noviZaposlenik.Prezime,
+                        Korisnicko_ime = noviZaposlenik.Korisnicko_ime,
+                        Lozinka = lozinka,
+                        Spol = noviZaposlenik.Spol,
+                        Email = noviZaposlenik.Email,
+                        Broj_mobitela = noviZaposlenik.Broj_mobitela,
+                        OIB = noviZaposlenik.OIB,
+                        Datum_zaposlenja = noviZaposlenik.Datum_zaposlenja,
+                        Id_VrstaZaposlenika = noviZaposlenik.Id_VrstaZaposlenika
                     };
-                baza.Zaposlenik.Add(zaposlenik);
-                baza.SaveChanges();
+                    baza.Zaposlenik.Add(zaposlenik);
+                    baza.SaveChanges();
+                    return vecPostoji;
+                }
+                else
+                {
+                    vecPostoji = true;
+                    return vecPostoji;
+                }
             }
+
 
 
         }

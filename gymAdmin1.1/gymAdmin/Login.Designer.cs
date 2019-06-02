@@ -95,6 +95,7 @@
             this.Controls.Add(this.textBoxKorIme);
             this.Controls.Add(this.buttonPrijava);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

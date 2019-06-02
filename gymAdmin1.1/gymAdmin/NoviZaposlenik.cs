@@ -43,11 +43,17 @@ namespace gymAdmin
                 zaposlenik.OIB = textBoxOibZaposlenik.Text;
                 zaposlenik.Datum_zaposlenja = dateTimePickerZaposlenje.Value;
                 zaposlenik.Id_VrstaZaposlenika = 1;
-                zaposlenici.DodajUBazu(zaposlenik);
-                MessageBox.Show($"Uspješno dodan član! Korisničko ime člana je:{zaposlenik.Korisnicko_ime},a lozinka je:" +
+                if (zaposlenici.DodajUBazu(zaposlenik) == false)
+                {
+                    MessageBox.Show($"Uspješno dodan zaposlenik! Korisničko ime zaposlenika je:{zaposlenik.Korisnicko_ime},a lozinka je:" +
                     $"{zaposlenik.Lozinka} ," +
                     $"najbolje da odmah zapišete Vaše podatke za prijavu!");
-                this.Hide();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Taj zaposlenik već postoji u bazi!");
+                }
             }
             else
             {
