@@ -13,6 +13,7 @@ namespace gymAdmin
     public partial class NoviZaposlenik : Form
     {
         ZaposlenikRadnje zaposlenici = new ZaposlenikRadnje();
+        
         public NoviZaposlenik()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace gymAdmin
 
         private void buttonDodajZaposlenika2_Click(object sender, EventArgs e)
         {
+            
             if (ProvjeriUnos()) {
                 List<string> kredencijali = new List<string>();
                 var checkedButton = groupBoxSpol.Controls.OfType<RadioButton>()
@@ -62,6 +64,11 @@ namespace gymAdmin
             
             
             
+
+        }
+
+        private void NoviZaposlenik_Load(object sender, EventArgs e)
+        {
 
         }
     }

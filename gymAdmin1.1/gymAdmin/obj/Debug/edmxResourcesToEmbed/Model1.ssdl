@@ -57,18 +57,6 @@
     <Property Name="Datum_zaposlenja" Type="date" Nullable="false" />
     <Property Name="Id_VrstaZaposlenika" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Clanarina_Clanarina">
-    <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="1" />
-    <End Role="Clanarina1" Type="Self.Clanarina" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Clanarina">
-        <PropertyRef Name="Id_Clanarina" />
-      </Principal>
-      <Dependent Role="Clanarina1">
-        <PropertyRef Name="Id_Clanarina" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Klijent_Clanarina">
     <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="0..1" />
     <End Role="Klijent" Type="Self.Klijent" Multiplicity="*" />
@@ -111,10 +99,6 @@
     <EntitySet Name="Mjerenje" EntityType="Self.Mjerenje" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Vrsta_zaposlenika" EntityType="Self.Vrsta_zaposlenika" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Zaposlenik" EntityType="Self.Zaposlenik" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Clanarina_Clanarina" Association="Self.FK_Clanarina_Clanarina">
-      <End Role="Clanarina" EntitySet="Clanarina" />
-      <End Role="Clanarina1" EntitySet="Clanarina" />
-    </AssociationSet>
     <AssociationSet Name="FK_Klijent_Clanarina" Association="Self.FK_Klijent_Clanarina">
       <End Role="Clanarina" EntitySet="Clanarina" />
       <End Role="Klijent" EntitySet="Klijent" />

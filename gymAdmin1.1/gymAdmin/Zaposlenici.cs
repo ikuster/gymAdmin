@@ -70,5 +70,10 @@ namespace gymAdmin
         {
 
         }
+
+        private void buttonUrediZaposlenika_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

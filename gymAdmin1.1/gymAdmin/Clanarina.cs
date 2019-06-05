@@ -14,21 +14,10 @@ namespace gymAdmin
     
     public partial class Clanarina
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Clanarina()
-        {
-            this.Klijent = new HashSet<Klijent>();
-        }
-    
         public int Id_Clanarina { get; set; }
         public string Naziv { get; set; }
         public string Opis { get; set; }
         public int Trajanje { get; set; }
         public double Cijena { get; set; }
-    
-        public virtual Clanarina Clanarina1 { get; set; }
-        public virtual Clanarina Clanarina2 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Klijent> Klijent { get; set; }
     }
 }

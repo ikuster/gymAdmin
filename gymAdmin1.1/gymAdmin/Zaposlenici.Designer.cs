@@ -53,7 +53,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(27, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 21);
+            this.label1.Size = new System.Drawing.Size(132, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Popis zaposlenika";
             // 
@@ -106,6 +106,7 @@
             this.buttonUrediZaposlenika.TabIndex = 29;
             this.buttonUrediZaposlenika.Text = "Uredi";
             this.buttonUrediZaposlenika.UseVisualStyleBackColor = false;
+            this.buttonUrediZaposlenika.Click += new System.EventHandler(this.buttonUrediZaposlenika_Click);
             // 
             // label2
             // 

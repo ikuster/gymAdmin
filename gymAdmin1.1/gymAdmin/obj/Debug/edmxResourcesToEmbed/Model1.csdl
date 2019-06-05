@@ -9,9 +9,6 @@
     <Property Name="Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Trajanje" Type="Int32" Nullable="false" />
     <Property Name="Cijena" Type="Double" Nullable="false" />
-    <NavigationProperty Name="Clanarina1" Relationship="Self.FK_Clanarina_Clanarina" FromRole="Clanarina" ToRole="Clanarina1" />
-    <NavigationProperty Name="Clanarina2" Relationship="Self.FK_Clanarina_Clanarina" FromRole="Clanarina1" ToRole="Clanarina" />
-    <NavigationProperty Name="Klijent" Relationship="Self.FK_Klijent_Clanarina" FromRole="Clanarina" ToRole="Klijent" />
   </EntityType>
   <EntityType Name="Klijent">
     <Key>
@@ -65,18 +62,6 @@
     <Property Name="Id_VrstaZaposlenika" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Vrsta_zaposlenika" Relationship="Self.FK_Zaposlenik_Vrsta_zaposlenika" FromRole="Zaposlenik" ToRole="Vrsta_zaposlenika" />
   </EntityType>
-  <Association Name="FK_Clanarina_Clanarina">
-    <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="1" />
-    <End Role="Clanarina1" Type="Self.Clanarina" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Clanarina">
-        <PropertyRef Name="Id_Clanarina" />
-      </Principal>
-      <Dependent Role="Clanarina1">
-        <PropertyRef Name="Id_Clanarina" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Klijent_Clanarina">
     <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="0..1" />
     <End Role="Klijent" Type="Self.Klijent" Multiplicity="*" />
@@ -119,10 +104,6 @@
     <EntitySet Name="Mjerenje" EntityType="Self.Mjerenje" />
     <EntitySet Name="Vrsta_zaposlenika" EntityType="Self.Vrsta_zaposlenika" />
     <EntitySet Name="Zaposlenik" EntityType="Self.Zaposlenik" />
-    <AssociationSet Name="FK_Clanarina_Clanarina" Association="Self.FK_Clanarina_Clanarina">
-      <End Role="Clanarina" EntitySet="Clanarina" />
-      <End Role="Clanarina1" EntitySet="Clanarina" />
-    </AssociationSet>
     <AssociationSet Name="FK_Klijent_Clanarina" Association="Self.FK_Klijent_Clanarina">
       <End Role="Clanarina" EntitySet="Clanarina" />
       <End Role="Klijent" EntitySet="Klijent" />

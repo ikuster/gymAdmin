@@ -10,7 +10,6 @@
         <EntityTypeShape EntityType="DBModel.Mjerenje" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.Vrsta_zaposlenika" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.Zaposlenik" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <AssociationConnector Association="DBModel.FK_Clanarina_Clanarina" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Klijent_Clanarina" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Mjerenje_Klijent" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Zaposlenik_Vrsta_zaposlenika" ManuallyRouted="false" />
