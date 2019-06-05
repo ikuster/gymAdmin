@@ -51,7 +51,7 @@ namespace gymAdmin
             }
             else
             {
-                MessageBox.Show($"Clanarina sa nazivom: {0} već postoji!", clanarina.Naziv);
+                MessageBox.Show("Clanarina sa nazivom: " + clanarina.Naziv + " već postoji!");
             }
         }
 
