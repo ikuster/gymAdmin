@@ -79,5 +79,29 @@ namespace gymAdmin
             
         }
 
+        public bool ValidirajTrajanje(string trajanje)
+        {
+            if(int.TryParse(trajanje, out int t))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ValidirajCijenu(string cijena)
+        {
+            if (float.TryParse(cijena, out float c))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

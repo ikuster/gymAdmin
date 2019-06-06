@@ -19,5 +19,23 @@ namespace gymAdmin
         public string Opis { get; set; }
         public int Trajanje { get; set; }
         public double Cijena { get; set; }
+
+
+        //public bool setTrajanje(string t)
+        //{
+        //    if(int.TryParse(t, out int _trajanje)){
+        //        trajanje = _trajanje;
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        //public int getTrajanje()
+        //{
+        //    return trajanje;
+        //}
     }
 }

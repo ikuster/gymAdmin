@@ -38,6 +38,7 @@ namespace gymAdmin
         private void Clanarine_Load(object sender, EventArgs e)
         {
             OsvjeziFormu();
+            dgvClanarine.Columns[0].Visible = false;
         }
 
         private void BtnOsvjeziClanarine_Click(object sender, EventArgs e)

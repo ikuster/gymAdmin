@@ -14,6 +14,7 @@ namespace gymAdmin
     public partial class NovaClanarina : Form
     {
         ClanarinaRepozitorij Repozitorij = new ClanarinaRepozitorij();
+        bool ispravniPodaci = false;
 
         public NovaClanarina()
         {
@@ -41,13 +42,68 @@ namespace gymAdmin
 
         private void BtnDodajNovaClanarina_Click(object sender, EventArgs e)
         {
-            Repozitorij.DodajClanarinu(StvoriClanarinu());
-            this.Close();
+            if (ispravniPodaci && TxtNazivNovaClanarina.Text != "")
+            {
+                Repozitorij.DodajClanarinu(StvoriClanarinu());
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Podaci nisu u ispravnom formatu!");
+            }
+            
+            
         }
 
         private void NovaClanarina_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+        }
+
+        private void NovaClanarina_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtTrajanjeNovaClanarina_TextChanged(object sender, EventArgs e)
+        {
+            if (!Repozitorij.ValidirajTrajanje(TxtTrajanjeNovaClanarina.Text))
+            {
+                LabelValidation1.BackColor = Color.Red;
+            }
+            else
+            {
+                LabelValidation1.BackColor = Color.Green;
+            }
+        }
+
+        private void TxtNazivNovaClanarina_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtNazivNovaClanarina.Text != "")
+            {
+                LabelValidation0.BackColor = Color.Green;
+                ispravniPodaci = true;
+            }
+            else
+            {
+                LabelValidation0.BackColor = Color.Red;
+                ispravniPodaci = false;
+            }
+            
+        }
+
+        private void TxtCijenaNovaClanarina_TextChanged(object sender, EventArgs e)
+        {
+            if (!Repozitorij.ValidirajCijenu(TxtCijenaNovaClanarina.Text))
+            {
+                LabelValidation2.BackColor = Color.Red;
+                ispravniPodaci = false;
+            }
+            else
+            {
+                LabelValidation2.BackColor = Color.Green;
+                ispravniPodaci = true;
+            }
         }
     }
 }

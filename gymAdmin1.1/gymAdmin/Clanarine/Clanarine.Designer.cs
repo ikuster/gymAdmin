@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.PanelKlijenti = new System.Windows.Forms.Panel();
+            this.BtnOsvjeziClanarine = new System.Windows.Forms.Button();
             this.dgvClanarine = new System.Windows.Forms.DataGridView();
             this.LblKlijenti = new System.Windows.Forms.Label();
             this.BtnUrediClanarinu = new System.Windows.Forms.Button();
             this.BtnIzbrisiClanarinu = new System.Windows.Forms.Button();
             this.BtnDodajClanarinu = new System.Windows.Forms.Button();
-            this.BtnOsvjeziClanarine = new System.Windows.Forms.Button();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanarine)).BeginInit();
             this.SuspendLayout();
@@ -57,8 +57,28 @@
             this.PanelKlijenti.Size = new System.Drawing.Size(801, 461);
             this.PanelKlijenti.TabIndex = 24;
             // 
+            // BtnOsvjeziClanarine
+            // 
+            this.BtnOsvjeziClanarine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnOsvjeziClanarine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.BtnOsvjeziClanarine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnOsvjeziClanarine.FlatAppearance.BorderSize = 0;
+            this.BtnOsvjeziClanarine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOsvjeziClanarine.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnOsvjeziClanarine.Location = new System.Drawing.Point(185, 306);
+            this.BtnOsvjeziClanarine.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnOsvjeziClanarine.Name = "BtnOsvjeziClanarine";
+            this.BtnOsvjeziClanarine.Size = new System.Drawing.Size(139, 29);
+            this.BtnOsvjeziClanarine.TabIndex = 24;
+            this.BtnOsvjeziClanarine.Text = "Osvjezi";
+            this.BtnOsvjeziClanarine.UseVisualStyleBackColor = false;
+            this.BtnOsvjeziClanarine.Click += new System.EventHandler(this.BtnOsvjeziClanarine_Click);
+            // 
             // dgvClanarine
             // 
+            this.dgvClanarine.AllowUserToResizeColumns = false;
+            this.dgvClanarine.AllowUserToResizeRows = false;
+            this.dgvClanarine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClanarine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClanarine.Location = new System.Drawing.Point(15, 40);
             this.dgvClanarine.Name = "dgvClanarine";
@@ -124,23 +144,6 @@
             this.BtnDodajClanarinu.Text = "Dodaj";
             this.BtnDodajClanarinu.UseVisualStyleBackColor = false;
             this.BtnDodajClanarinu.Click += new System.EventHandler(this.BtnDodajClanarinu_Click);
-            // 
-            // BtnOsvjeziClanarine
-            // 
-            this.BtnOsvjeziClanarine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnOsvjeziClanarine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
-            this.BtnOsvjeziClanarine.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnOsvjeziClanarine.FlatAppearance.BorderSize = 0;
-            this.BtnOsvjeziClanarine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnOsvjeziClanarine.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnOsvjeziClanarine.Location = new System.Drawing.Point(185, 306);
-            this.BtnOsvjeziClanarine.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnOsvjeziClanarine.Name = "BtnOsvjeziClanarine";
-            this.BtnOsvjeziClanarine.Size = new System.Drawing.Size(139, 29);
-            this.BtnOsvjeziClanarine.TabIndex = 24;
-            this.BtnOsvjeziClanarine.Text = "Osvjezi";
-            this.BtnOsvjeziClanarine.UseVisualStyleBackColor = false;
-            this.BtnOsvjeziClanarine.Click += new System.EventHandler(this.BtnOsvjeziClanarine_Click);
             // 
             // Clanarine
             // 
