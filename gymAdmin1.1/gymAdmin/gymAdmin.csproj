@@ -128,10 +128,10 @@
     <Compile Include="NoviClan.Designer.cs">
       <DependentUpon>NoviClan.cs</DependentUpon>
     </Compile>
-    <Compile Include="NoviZaposlenik.cs">
+    <Compile Include="Zaposlenici\NoviZaposlenik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NoviZaposlenik.Designer.cs">
+    <Compile Include="Zaposlenici\NoviZaposlenik.Designer.cs">
       <DependentUpon>NoviZaposlenik.cs</DependentUpon>
     </Compile>
     <Compile Include="PotvrdaBrisanja.cs">
@@ -151,13 +151,13 @@
     <Compile Include="Vrsta_zaposlenika.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Zaposlenici.cs">
+    <Compile Include="Zaposlenici\Zaposlenici.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Zaposlenici.Designer.cs">
+    <Compile Include="Zaposlenici\Zaposlenici.Designer.cs">
       <DependentUpon>Zaposlenici.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZaposlenikRadnje.cs" />
+    <Compile Include="Zaposlenici\ZaposlenikRadnje.cs" />
     <Compile Include="Zaposlenik.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -182,7 +182,7 @@
     <EmbeddedResource Include="NoviClan.resx">
       <DependentUpon>NoviClan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NoviZaposlenik.resx">
+    <EmbeddedResource Include="Zaposlenici\NoviZaposlenik.resx">
       <DependentUpon>NoviZaposlenik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PotvrdaBrisanja.resx">
@@ -200,7 +200,7 @@
     <EmbeddedResource Include="Clanarine\UrediClanarinu.resx">
       <DependentUpon>UrediClanarinu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Zaposlenici.resx">
+    <EmbeddedResource Include="Zaposlenici\Zaposlenici.resx">
       <DependentUpon>Zaposlenici.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
@@ -239,5 +239,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
