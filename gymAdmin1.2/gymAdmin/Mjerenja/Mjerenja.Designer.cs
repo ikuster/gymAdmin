@@ -129,6 +129,7 @@
             this.BtnObrisiMjerenja.TabIndex = 25;
             this.BtnObrisiMjerenja.Text = "Obriši";
             this.BtnObrisiMjerenja.UseVisualStyleBackColor = false;
+            this.BtnObrisiMjerenja.Click += new System.EventHandler(this.BtnObrisiMjerenja_Click);
             // 
             // TxtPostotakMastiDodajMjerenje
             // 

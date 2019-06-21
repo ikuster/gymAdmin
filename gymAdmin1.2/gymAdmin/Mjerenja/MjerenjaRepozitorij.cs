@@ -32,5 +32,15 @@ namespace gymAdmin
                 db.SaveChanges();
             }
         }
+
+        public void IzbrisiMjerenje(Mjerenje mjerenje)
+        {
+            using (var db = new Entities())
+            {
+                db.Mjerenje.Attach(mjerenje);
+                db.Mjerenje.Remove(mjerenje);
+                db.SaveChanges();
+            }
+        }
     }
 }

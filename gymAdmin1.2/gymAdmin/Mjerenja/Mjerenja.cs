@@ -35,6 +35,11 @@ namespace gymAdmin
             TxtTežinaDodajMjerenje.Clear();
             TxtVisinaDodajMjerenje.Clear();
         }
+
+        public Mjerenje getMjerenje()
+        {
+            return dgvMjerenja.CurrentRow.DataBoundItem as Mjerenje;
+        }
  
         private void Mjerenja_Load(object sender, EventArgs e)
         {
@@ -62,5 +67,12 @@ namespace gymAdmin
             OcistiFormu();
             OsvjeziMjerenja();
         }
+
+        private void BtnObrisiMjerenja_Click(object sender, EventArgs e)
+        {
+            MjerenjaRepozitorij.IzbrisiMjerenje(getMjerenje());
+            OsvjeziMjerenja();
+        }
     }
+    
 }

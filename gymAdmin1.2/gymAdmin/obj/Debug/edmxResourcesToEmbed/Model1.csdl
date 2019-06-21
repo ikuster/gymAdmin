@@ -30,7 +30,7 @@
     <Key>
       <PropertyRef Name="Id_Mjerenje" />
     </Key>
-    <Property Name="Id_Mjerenje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Mjerenje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Name="Visina" Type="Double" Nullable="false" />
     <Property Name="Tezina" Type="Double" Nullable="false" />
     <Property Name="Datum_mjerenja" Type="DateTime" Nullable="false" Precision="0" />
