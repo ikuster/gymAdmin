@@ -41,13 +41,13 @@
             this.LblKlijenti = new System.Windows.Forms.Label();
             this.BtnPretraziKlijenti = new System.Windows.Forms.Button();
             this.TxtPretrazivanjeKlijenti = new System.Windows.Forms.TextBox();
-            this.DGVklijenti = new System.Windows.Forms.DataGridView();
+            this.dgvKlijenti = new System.Windows.Forms.DataGridView();
             this.BtnDetaljnoKlijenti = new System.Windows.Forms.Button();
             this.BtnIzbrisiKlijenti = new System.Windows.Forms.Button();
             this.BtnDodajKlijenti = new System.Windows.Forms.Button();
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVklijenti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -190,7 +190,7 @@
             this.PanelKlijenti.Controls.Add(this.LblKlijenti);
             this.PanelKlijenti.Controls.Add(this.BtnPretraziKlijenti);
             this.PanelKlijenti.Controls.Add(this.TxtPretrazivanjeKlijenti);
-            this.PanelKlijenti.Controls.Add(this.DGVklijenti);
+            this.PanelKlijenti.Controls.Add(this.dgvKlijenti);
             this.PanelKlijenti.Controls.Add(this.BtnDetaljnoKlijenti);
             this.PanelKlijenti.Controls.Add(this.BtnIzbrisiKlijenti);
             this.PanelKlijenti.Controls.Add(this.BtnDodajKlijenti);
@@ -251,18 +251,18 @@
             this.TxtPretrazivanjeKlijenti.Size = new System.Drawing.Size(300, 29);
             this.TxtPretrazivanjeKlijenti.TabIndex = 18;
             // 
-            // DGVklijenti
+            // dgvKlijenti
             // 
-            this.DGVklijenti.AllowUserToOrderColumns = true;
-            this.DGVklijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvKlijenti.AllowUserToOrderColumns = true;
+            this.dgvKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGVklijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVklijenti.Location = new System.Drawing.Point(15, 62);
-            this.DGVklijenti.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
-            this.DGVklijenti.Name = "DGVklijenti";
-            this.DGVklijenti.Size = new System.Drawing.Size(770, 232);
-            this.DGVklijenti.TabIndex = 17;
+            this.dgvKlijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKlijenti.Location = new System.Drawing.Point(15, 62);
+            this.dgvKlijenti.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
+            this.dgvKlijenti.Name = "dgvKlijenti";
+            this.dgvKlijenti.Size = new System.Drawing.Size(770, 232);
+            this.dgvKlijenti.TabIndex = 17;
             // 
             // BtnDetaljnoKlijenti
             // 
@@ -332,7 +332,7 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelKlijenti.ResumeLayout(false);
             this.PanelKlijenti.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVklijenti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,7 +349,7 @@
         private System.Windows.Forms.Label LblKlijenti;
         private System.Windows.Forms.Button BtnPretraziKlijenti;
         private System.Windows.Forms.TextBox TxtPretrazivanjeKlijenti;
-        private System.Windows.Forms.DataGridView DGVklijenti;
+        private System.Windows.Forms.DataGridView dgvKlijenti;
         private System.Windows.Forms.Button BtnDetaljnoKlijenti;
         private System.Windows.Forms.Button BtnIzbrisiKlijenti;
         private System.Windows.Forms.Button BtnDodajKlijenti;

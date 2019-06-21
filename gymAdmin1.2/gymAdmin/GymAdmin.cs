@@ -12,15 +12,20 @@ namespace gymAdmin
 {
     public partial class GymAdmin : Form
     {
-       
+        KlijentiRepozitorij Klijenti = new KlijentiRepozitorij();
         public GymAdmin()
         {
             InitializeComponent();
         }
-
+        private void OsvjeziFormu()
+        {
+            dgvKlijenti.DataSource = Klijenti.DohvatiKlijente();
+            dgvKlijenti.Columns[9].Visible = false;
+            dgvKlijenti.Columns[10].Visible = false;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-             
+            OsvjeziFormu();
         }
 
         private void TableLayout_Paint(object sender, PaintEventArgs e)
@@ -73,10 +78,16 @@ namespace gymAdmin
             noviClan.Show();
         }
 
+        private void NoviClan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void BtnIzbrisiKlijenti_Click(object sender, EventArgs e)
         {
-            PotvrdaBrisanja formaBrisanje = new PotvrdaBrisanja();
-            formaBrisanje.Show();
+            Klijent izabraniKlijent = dgvKlijenti.CurrentRow.DataBoundItem as Klijent;
+            Klijenti.ObrisiKlijenta(izabraniKlijent);
+            OsvjeziFormu();
         }
 
         private void BtnMjerenjaKlijenti_Click(object sender, EventArgs e)
@@ -91,4 +102,4 @@ namespace gymAdmin
             formaDetaljiKlijent.Show();
         }
     }
-} 
+}
