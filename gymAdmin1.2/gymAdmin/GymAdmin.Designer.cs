@@ -241,6 +241,7 @@
             this.BtnPretraziKlijenti.TabIndex = 16;
             this.BtnPretraziKlijenti.Text = "Pretraži";
             this.BtnPretraziKlijenti.UseVisualStyleBackColor = false;
+            this.BtnPretraziKlijenti.Click += new System.EventHandler(this.BtnPretraziKlijenti_Click);
             // 
             // TxtPretrazivanjeKlijenti
             // 

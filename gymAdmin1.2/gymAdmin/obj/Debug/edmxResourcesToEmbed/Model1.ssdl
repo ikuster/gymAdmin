@@ -14,7 +14,7 @@
     <Key>
       <PropertyRef Name="Id_Klijent" />
     </Key>
-    <Property Name="Id_Klijent" Type="int" Nullable="false" />
+    <Property Name="Id_Klijent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ime" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Prezime" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Spol" Type="nchar" MaxLength="1" Nullable="false" />

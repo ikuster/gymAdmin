@@ -101,5 +101,10 @@ namespace gymAdmin
             DetaljiKlijent formaDetaljiKlijent = new DetaljiKlijent();
             formaDetaljiKlijent.Show();
         }
+
+        private void BtnPretraziKlijenti_Click(object sender, EventArgs e)
+        {
+            OsvjeziFormu();
+        }
     }
 }
