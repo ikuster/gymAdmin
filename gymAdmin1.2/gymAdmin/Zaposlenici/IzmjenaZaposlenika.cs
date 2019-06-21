@@ -20,6 +20,13 @@ namespace gymAdmin
             zaposlenikIzmjena = odabraniZaposlenik;
             InitializeComponent();
         }
+        private bool ProvjeriUnos()
+        {
+            if (textBoxImeZaposlenik.Text == "" || textBoxPrezimeZaposlenik.Text == "" ||
+                textBoxEmailZaposlenik.Text == "" || textBoxBrMobZaposlenik.Text == "" || textBoxOibZaposlenik.Text == "" ||
+                (groupBoxSpol.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked) == null)) return false;
+            else return true;
+        }
 
         private void IzmjenaZaposlenika_Load(object sender, EventArgs e)
         {
@@ -38,16 +45,24 @@ namespace gymAdmin
 
         private void buttonSpremi_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities())
-            {
-                context.Zaposlenik.Attach(zaposlenikIzmjena);
-                zaposlenikIzmjena.Prezime = textBoxPrezimeZaposlenik.Text;
-                zaposlenikIzmjena.Email = textBoxEmailZaposlenik.Text;
-                zaposlenikIzmjena.Broj_mobitela = textBoxBrMobZaposlenik.Text;
-                context.SaveChanges();
-                MessageBox.Show("Uspješno ste izmijenili podatke o zaposleniku!");
-               this.Hide();
-            }
+                Zaposlenik zaposlenik = new Zaposlenik();
+                zaposlenik.Ime = textBoxImeZaposlenik.Text;           
+                zaposlenik.Prezime = textBoxPrezimeZaposlenik.Text;
+                var checkedButton = groupBoxSpol.Controls.OfType<RadioButton>()
+                                         .FirstOrDefault(rb => rb.Checked);
+                zaposlenik.Spol = checkedButton.Text;
+                zaposlenik.Email = textBoxEmailZaposlenik.Text;
+                zaposlenik.Broj_mobitela = textBoxBrMobZaposlenik.Text;
+                zaposlenik.OIB = textBoxOibZaposlenik.Text;
+                zaposlenik.Datum_zaposlenja = dateTimePickerZaposlenje.Value;
+                if (ProvjeriUnos())
+                    {
+                        zaposlenici.UrediUBazi(zaposlenikIzmjena,zaposlenik);
+                        MessageBox.Show("Uspješno ste izmijenili podatke o zaposleniku!");
+                        this.Hide();
+                    }
+                else MessageBox.Show("Sva polja moraju biti popunjena!");
+            
         }
 
     }

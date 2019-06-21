@@ -12,9 +12,12 @@ namespace gymAdmin
 {
     public partial class GymAdmin : Form
     {
+        private string korIme;
         KlijentiRepozitorij Klijenti = new KlijentiRepozitorij();
-        public GymAdmin()
+        ZaposlenikRadnje Zaposlenici = new ZaposlenikRadnje();
+        public GymAdmin(string korisnickoIme)
         {
+            korIme = korisnickoIme;
             InitializeComponent();
         }
         private void OsvjeziFormu()
@@ -46,9 +49,14 @@ namespace gymAdmin
         private void BtnZaposlenici_Click(object sender, EventArgs e)
         {
             PanelActive.Location = new System.Drawing.Point(174, 276);
-
-            Zaposlenici formaZaposlenici = new Zaposlenici();
-            formaZaposlenici.Show();
+            if (Zaposlenici.VratiTipKorisnika(korIme) == 2) {
+                Zaposlenici formaZaposlenici = new Zaposlenici();
+                formaZaposlenici.Show();
+            }
+            else
+            {
+                MessageBox.Show("Nemate prava!");
+            }
         }
 
         private void BtnKlijenti_Click(object sender, EventArgs e)

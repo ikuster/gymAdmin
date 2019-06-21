@@ -27,7 +27,8 @@ namespace gymAdmin
             if (provjeriPostojanje == 1)
             {
                 this.Hide();
-                GymAdmin glavnaForma = new GymAdmin();
+                string korIme = textBoxKorIme.Text;
+                GymAdmin glavnaForma = new GymAdmin(korIme);
                 glavnaForma.Show();
             }
 

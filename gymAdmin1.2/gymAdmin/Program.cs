@@ -16,7 +16,7 @@ namespace gymAdmin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GymAdmin());
+            Application.Run(new Login());
         }
     }
 }

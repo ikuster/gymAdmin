@@ -120,7 +120,6 @@
             // 
             // textBoxImeZaposlenik
             // 
-            this.textBoxImeZaposlenik.Enabled = false;
             this.textBoxImeZaposlenik.Location = new System.Drawing.Point(167, 37);
             this.textBoxImeZaposlenik.Name = "textBoxImeZaposlenik";
             this.textBoxImeZaposlenik.Size = new System.Drawing.Size(130, 20);
@@ -149,7 +148,6 @@
             // 
             // textBoxOibZaposlenik
             // 
-            this.textBoxOibZaposlenik.Enabled = false;
             this.textBoxOibZaposlenik.Location = new System.Drawing.Point(167, 232);
             this.textBoxOibZaposlenik.Name = "textBoxOibZaposlenik";
             this.textBoxOibZaposlenik.Size = new System.Drawing.Size(130, 20);
@@ -157,7 +155,6 @@
             // 
             // dateTimePickerZaposlenje
             // 
-            this.dateTimePickerZaposlenje.Enabled = false;
             this.dateTimePickerZaposlenje.Location = new System.Drawing.Point(198, 273);
             this.dateTimePickerZaposlenje.Name = "dateTimePickerZaposlenje";
             this.dateTimePickerZaposlenje.Size = new System.Drawing.Size(200, 20);
@@ -206,7 +203,6 @@
             // 
             this.groupBoxSpol.Controls.Add(this.radioButtonSpolŽ);
             this.groupBoxSpol.Controls.Add(this.radioButtonSpolM);
-            this.groupBoxSpol.Enabled = false;
             this.groupBoxSpol.Location = new System.Drawing.Point(167, 98);
             this.groupBoxSpol.Name = "groupBoxSpol";
             this.groupBoxSpol.Size = new System.Drawing.Size(130, 33);

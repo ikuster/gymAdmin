@@ -43,6 +43,18 @@ namespace gymAdmin
             }
             return provjeriPostojanje;
         }
+        public int VratiTipKorisnika(string korIme)
+        {
+            int tipKorisnika;
+            using (var baza = new Entities())
+            {
+               tipKorisnika  =      (from z in baza.Zaposlenik
+                                    where z.Korisnicko_ime == korIme
+                                    select z.Vrsta_zaposlenika.Id_VrstaZaposlenika).First();
+            }
+            return tipKorisnika;
+
+        }
 
         public List<Zaposlenik> DohvatiSveIzBaze()
         {
@@ -64,6 +76,21 @@ namespace gymAdmin
                 baza.Zaposlenik.Remove(odabraniZaposlenik);
                 baza.SaveChanges();
             }
+        }
+        public void UrediUBazi(Zaposlenik odabraniZaposlenik,Zaposlenik izmjene) {
+            using(var context = new Entities())
+            {
+                context.Zaposlenik.Attach(odabraniZaposlenik);
+                odabraniZaposlenik.Ime = izmjene.Ime;
+                odabraniZaposlenik.Prezime = izmjene.Prezime;
+                odabraniZaposlenik.Spol = izmjene.Spol;
+                odabraniZaposlenik.Email = izmjene.Email;
+                odabraniZaposlenik.Broj_mobitela = izmjene.Broj_mobitela;
+                odabraniZaposlenik.OIB = izmjene.OIB;
+                odabraniZaposlenik.Datum_zaposlenja = izmjene.Datum_zaposlenja;
+                context.SaveChanges();
+            }
+            
         }
         public List<string> KreirajKredencijale(Zaposlenik noviZaposlenik) {
             List<string> kredencijali = new List<string>();
