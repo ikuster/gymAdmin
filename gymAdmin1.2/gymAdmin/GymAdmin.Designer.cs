@@ -39,12 +39,13 @@
             this.PanelKlijenti = new System.Windows.Forms.Panel();
             this.BtnMjerenjaKlijenti = new System.Windows.Forms.Button();
             this.LblKlijenti = new System.Windows.Forms.Label();
-            this.BtnPretraziKlijenti = new System.Windows.Forms.Button();
             this.TxtPretrazivanjeKlijenti = new System.Windows.Forms.TextBox();
             this.dgvKlijenti = new System.Windows.Forms.DataGridView();
-            this.BtnDetaljnoKlijenti = new System.Windows.Forms.Button();
+            this.BtnAzurirajKlijenti = new System.Windows.Forms.Button();
             this.BtnIzbrisiKlijenti = new System.Windows.Forms.Button();
             this.BtnDodajKlijenti = new System.Windows.Forms.Button();
+            this.buttonOsvježi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
@@ -67,7 +68,7 @@
             // 
             // PanelActive
             // 
-            this.PanelActive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PanelActive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.PanelActive.Location = new System.Drawing.Point(174, 69);
@@ -78,8 +79,8 @@
             // 
             // BtnPocetna
             // 
-            this.BtnPocetna.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.BtnPocetna.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPocetna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
             this.BtnPocetna.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -99,8 +100,8 @@
             // 
             // BtnClanarine
             // 
-            this.BtnClanarine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.BtnClanarine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnClanarine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
             this.BtnClanarine.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -120,8 +121,8 @@
             // 
             // BtnMjerenja
             // 
-            this.BtnMjerenja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.BtnMjerenja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMjerenja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
             this.BtnMjerenja.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -141,8 +142,8 @@
             // 
             // BtnZaposlenici
             // 
-            this.BtnZaposlenici.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.BtnZaposlenici.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnZaposlenici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
             this.BtnZaposlenici.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -162,8 +163,8 @@
             // 
             // BtnKlijenti
             // 
-            this.BtnKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.BtnKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
             this.BtnKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -183,15 +184,16 @@
             // 
             // PanelKlijenti
             // 
-            this.PanelKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PanelKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelKlijenti.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PanelKlijenti.Controls.Add(this.label1);
+            this.PanelKlijenti.Controls.Add(this.buttonOsvježi);
             this.PanelKlijenti.Controls.Add(this.BtnMjerenjaKlijenti);
             this.PanelKlijenti.Controls.Add(this.LblKlijenti);
-            this.PanelKlijenti.Controls.Add(this.BtnPretraziKlijenti);
             this.PanelKlijenti.Controls.Add(this.TxtPretrazivanjeKlijenti);
             this.PanelKlijenti.Controls.Add(this.dgvKlijenti);
-            this.PanelKlijenti.Controls.Add(this.BtnDetaljnoKlijenti);
+            this.PanelKlijenti.Controls.Add(this.BtnAzurirajKlijenti);
             this.PanelKlijenti.Controls.Add(this.BtnIzbrisiKlijenti);
             this.PanelKlijenti.Controls.Add(this.BtnDodajKlijenti);
             this.PanelKlijenti.Location = new System.Drawing.Point(184, 0);
@@ -226,37 +228,21 @@
             this.LblKlijenti.TabIndex = 22;
             this.LblKlijenti.Text = "Klijenti";
             // 
-            // BtnPretraziKlijenti
-            // 
-            this.BtnPretraziKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnPretraziKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
-            this.BtnPretraziKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnPretraziKlijenti.FlatAppearance.BorderSize = 0;
-            this.BtnPretraziKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPretraziKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnPretraziKlijenti.Location = new System.Drawing.Point(646, 20);
-            this.BtnPretraziKlijenti.Margin = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.BtnPretraziKlijenti.Name = "BtnPretraziKlijenti";
-            this.BtnPretraziKlijenti.Size = new System.Drawing.Size(139, 29);
-            this.BtnPretraziKlijenti.TabIndex = 16;
-            this.BtnPretraziKlijenti.Text = "Pretraži";
-            this.BtnPretraziKlijenti.UseVisualStyleBackColor = false;
-            this.BtnPretraziKlijenti.Click += new System.EventHandler(this.BtnPretraziKlijenti_Click);
-            // 
             // TxtPretrazivanjeKlijenti
             // 
             this.TxtPretrazivanjeKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtPretrazivanjeKlijenti.Location = new System.Drawing.Point(336, 20);
+            this.TxtPretrazivanjeKlijenti.Location = new System.Drawing.Point(460, 21);
             this.TxtPretrazivanjeKlijenti.Margin = new System.Windows.Forms.Padding(0);
             this.TxtPretrazivanjeKlijenti.Name = "TxtPretrazivanjeKlijenti";
             this.TxtPretrazivanjeKlijenti.Size = new System.Drawing.Size(300, 29);
             this.TxtPretrazivanjeKlijenti.TabIndex = 18;
+            this.TxtPretrazivanjeKlijenti.TextChanged += new System.EventHandler(this.TxtPretrazivanjeKlijenti_TextChanged);
             // 
             // dgvKlijenti
             // 
             this.dgvKlijenti.AllowUserToOrderColumns = true;
-            this.dgvKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKlijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKlijenti.Location = new System.Drawing.Point(15, 62);
@@ -265,22 +251,22 @@
             this.dgvKlijenti.Size = new System.Drawing.Size(770, 232);
             this.dgvKlijenti.TabIndex = 17;
             // 
-            // BtnDetaljnoKlijenti
+            // BtnAzurirajKlijenti
             // 
-            this.BtnDetaljnoKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDetaljnoKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
-            this.BtnDetaljnoKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnDetaljnoKlijenti.FlatAppearance.BorderSize = 0;
-            this.BtnDetaljnoKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDetaljnoKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDetaljnoKlijenti.Location = new System.Drawing.Point(646, 306);
-            this.BtnDetaljnoKlijenti.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnDetaljnoKlijenti.Name = "BtnDetaljnoKlijenti";
-            this.BtnDetaljnoKlijenti.Size = new System.Drawing.Size(139, 29);
-            this.BtnDetaljnoKlijenti.TabIndex = 21;
-            this.BtnDetaljnoKlijenti.Text = "Detalji";
-            this.BtnDetaljnoKlijenti.UseVisualStyleBackColor = false;
-            this.BtnDetaljnoKlijenti.Click += new System.EventHandler(this.BtnDetaljnoKlijenti_Click);
+            this.BtnAzurirajKlijenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAzurirajKlijenti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.BtnAzurirajKlijenti.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAzurirajKlijenti.FlatAppearance.BorderSize = 0;
+            this.BtnAzurirajKlijenti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAzurirajKlijenti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnAzurirajKlijenti.Location = new System.Drawing.Point(646, 306);
+            this.BtnAzurirajKlijenti.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnAzurirajKlijenti.Name = "BtnAzurirajKlijenti";
+            this.BtnAzurirajKlijenti.Size = new System.Drawing.Size(139, 29);
+            this.BtnAzurirajKlijenti.TabIndex = 21;
+            this.BtnAzurirajKlijenti.Text = "Ažuriraj";
+            this.BtnAzurirajKlijenti.UseVisualStyleBackColor = false;
+            this.BtnAzurirajKlijenti.Click += new System.EventHandler(this.BtnAzurirajKlijenti_Click);
             // 
             // BtnIzbrisiKlijenti
             // 
@@ -316,6 +302,32 @@
             this.BtnDodajKlijenti.UseVisualStyleBackColor = false;
             this.BtnDodajKlijenti.Click += new System.EventHandler(this.BtnDodajKlijenti_Click);
             // 
+            // buttonOsvježi
+            // 
+            this.buttonOsvježi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOsvježi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.buttonOsvježi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOsvježi.FlatAppearance.BorderSize = 0;
+            this.buttonOsvježi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOsvježi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonOsvježi.Location = new System.Drawing.Point(15, 306);
+            this.buttonOsvježi.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonOsvježi.Name = "buttonOsvježi";
+            this.buttonOsvježi.Size = new System.Drawing.Size(139, 29);
+            this.buttonOsvježi.TabIndex = 24;
+            this.buttonOsvježi.Text = "Osvježi";
+            this.buttonOsvježi.UseVisualStyleBackColor = false;
+            this.buttonOsvježi.Click += new System.EventHandler(this.buttonOsvježi_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 21);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Pretraži po imenu:";
+            // 
             // GymAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -348,14 +360,15 @@
         private System.Windows.Forms.Button BtnKlijenti;
         private System.Windows.Forms.Panel PanelKlijenti;
         private System.Windows.Forms.Label LblKlijenti;
-        private System.Windows.Forms.Button BtnPretraziKlijenti;
         private System.Windows.Forms.TextBox TxtPretrazivanjeKlijenti;
         private System.Windows.Forms.DataGridView dgvKlijenti;
-        private System.Windows.Forms.Button BtnDetaljnoKlijenti;
+        private System.Windows.Forms.Button BtnAzurirajKlijenti;
         private System.Windows.Forms.Button BtnIzbrisiKlijenti;
         private System.Windows.Forms.Button BtnDodajKlijenti;
         private System.Windows.Forms.Panel PanelActive;
         private System.Windows.Forms.Button BtnMjerenjaKlijenti;
+        private System.Windows.Forms.Button buttonOsvježi;
+        private System.Windows.Forms.Label label1;
     }
 }
 

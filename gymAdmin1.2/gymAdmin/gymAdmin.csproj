@@ -76,11 +76,11 @@
     <Compile Include="Clanarine\NovaClanarina.Designer.cs">
       <DependentUpon>NovaClanarina.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetaljiKlijent.cs">
+    <Compile Include="Klijenti\AzurirajKlijent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetaljiKlijent.Designer.cs">
-      <DependentUpon>DetaljiKlijent.cs</DependentUpon>
+    <Compile Include="Klijenti\AzurirajKlijent.Designer.cs">
+      <DependentUpon>AzurirajKlijent.cs</DependentUpon>
     </Compile>
     <Compile Include="GymAdmin.cs">
       <SubType>Form</SubType>
@@ -174,8 +174,8 @@
     <EmbeddedResource Include="Clanarine\NovaClanarina.resx">
       <DependentUpon>NovaClanarina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetaljiKlijent.resx">
-      <DependentUpon>DetaljiKlijent.cs</DependentUpon>
+    <EmbeddedResource Include="Klijenti\AzurirajKlijent.resx">
+      <DependentUpon>AzurirajKlijent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GymAdmin.resx">
       <DependentUpon>GymAdmin.cs</DependentUpon>

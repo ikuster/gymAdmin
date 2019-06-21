@@ -93,21 +93,26 @@ namespace gymAdmin
         private void BtnMjerenjaKlijenti_Click(object sender, EventArgs e)
         {
             Mjerenja formMjerenja = new Mjerenja();
-            formMjerenja.MojKlijent = getKlijent(); 
+            formMjerenja.MojKlijent = getKlijent();
             formMjerenja.Show();
         }
 
-        private void BtnDetaljnoKlijenti_Click(object sender, EventArgs e)
+        private void BtnAzurirajKlijenti_Click(object sender, EventArgs e)
         {
-            DetaljiKlijent formaDetaljiKlijent = new DetaljiKlijent();
-            formaDetaljiKlijent.Show();
+            Klijent izabraniKlijent = dgvKlijenti.CurrentRow.DataBoundItem as Klijent;
+            AzurirajKlijent azurirajKlijent = new AzurirajKlijent(izabraniKlijent);
+            azurirajKlijent.Show();
         }
 
-        private void BtnPretraziKlijenti_Click(object sender, EventArgs e)
+        private void buttonOsvježi_Click(object sender, EventArgs e)
         {
             OsvjeziFormu();
         }
 
+        private void TxtPretrazivanjeKlijenti_TextChanged(object sender, EventArgs e)
+        {
+            dgvKlijenti.DataSource = Klijenti.DohvatiKlijente().Where(x => x.Ime.Contains(TxtPretrazivanjeKlijenti.Text)).ToList();
+        }
         private Klijent getKlijent()
         {
             return dgvKlijenti.CurrentRow.DataBoundItem as Klijent;

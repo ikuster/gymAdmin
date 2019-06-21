@@ -45,12 +45,6 @@ namespace gymAdmin
             return danas.AddDays(clanarina.Trajanje);
         }
 
-        private void CboxVrstaClanarineNoviClan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Clanarina clanarina = CboxVrstaClanarineNoviClan.SelectedItem as Clanarina;
-            LblIstekClanarineNoviClan.Text = izracunajIstek(clanarina).ToString("d/M/yy");
-        }
-
         private void NoviClan_Load(object sender, EventArgs e)
         {
             ClanarinaRepozitorij clanarine = new ClanarinaRepozitorij();
@@ -66,6 +60,48 @@ namespace gymAdmin
         {
             Klijenti.DodajNovog(kreirajNovogKlijenta());
             this.Close();
+        }
+
+        private void CboxVrstaClanarineNoviClan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Clanarina clanarina = CboxVrstaClanarineNoviClan.SelectedItem as Clanarina;
+            LblIstekClanarineNoviClan.Text = izracunajIstek(clanarina).ToString("d/M/yy");
+        }
+
+        private void TboxImeNoviClan_Validating(object sender, CancelEventArgs e)
+        {
+            string Ime = TboxImeNoviClan.Text;
+            if (Ime.Length < 2 || Ime.Any(char.IsDigit) || Ime.Length > 50)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void TboxPrezimeNoviClan_Validating(object sender, CancelEventArgs e)
+        {
+            string Prezime = TboxPrezimeNoviClan.Text;
+            if (Prezime.Length < 2 || Prezime.Any(char.IsDigit) || Prezime.Length > 50)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void TboxTelefonNoviClan_Validating(object sender, CancelEventArgs e)
+        {
+            string Broj = TboxTelefonNoviClan.Text;
+            if (Broj.Length < 8 || Broj.Length > 50)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void TboxEmailNoviClan_Validating(object sender, CancelEventArgs e)
+        {
+            string Email = TboxEmailNoviClan.Text;
+            if (Email.Length < 6 || Email.Length > 50)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

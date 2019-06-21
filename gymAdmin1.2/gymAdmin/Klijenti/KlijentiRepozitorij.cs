@@ -40,9 +40,20 @@ namespace gymAdmin
             }
 
         }
-        public void AzurirajKlijenta(Klijent klijent)
+        public void AzurirajKlijenta(Klijent stariKlijent, Klijent azuriraniKlijent)
         {
+            using (var db = new Entities())
+            {
+                db.Klijent.Attach(stariKlijent);
+                stariKlijent.Ime = azuriraniKlijent.Ime;
+                stariKlijent.Prezime = azuriraniKlijent.Prezime;
+                stariKlijent.Spol = azuriraniKlijent.Spol;
+                stariKlijent.Broj_mobitela = azuriraniKlijent.Broj_mobitela;
+                stariKlijent.Email = azuriraniKlijent.Email;
+                stariKlijent.Datum_isteka_clanarine = azuriraniKlijent.Datum_isteka_clanarine;
+                db.SaveChanges();
 
+            }
         }
     }
 }
