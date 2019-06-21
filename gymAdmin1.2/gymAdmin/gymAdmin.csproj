@@ -98,12 +98,13 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mjerenja.cs">
+    <Compile Include="Mjerenja\Mjerenja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mjerenja.Designer.cs">
+    <Compile Include="Mjerenja\Mjerenja.Designer.cs">
       <DependentUpon>Mjerenja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mjerenja\MjerenjaRepozitorij.cs" />
     <Compile Include="Mjerenje.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -182,7 +183,7 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mjerenja.resx">
+    <EmbeddedResource Include="Mjerenja\Mjerenja.resx">
       <DependentUpon>Mjerenja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klijenti\NoviClan.resx">

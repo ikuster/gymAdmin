@@ -32,14 +32,14 @@
             this.PanelListaMjerenja = new System.Windows.Forms.Panel();
             this.BtnDodajMjerenja = new System.Windows.Forms.Button();
             this.BtnObrisiMjerenja = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtPostotakMastiDodajMjerenje = new System.Windows.Forms.TextBox();
+            this.TxtTežinaDodajMjerenje = new System.Windows.Forms.TextBox();
+            this.TxtVisinaDodajMjerenje = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.DGWMjerenja = new System.Windows.Forms.DataGridView();
+            this.dgvMjerenja = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CboxMjerenjaTop = new System.Windows.Forms.ComboBox();
@@ -51,7 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TPanelMjerenja.SuspendLayout();
             this.PanelListaMjerenja.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGWMjerenja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMjerenja)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,14 +83,14 @@
             this.PanelListaMjerenja.BackColor = System.Drawing.SystemColors.ControlLight;
             this.PanelListaMjerenja.Controls.Add(this.BtnDodajMjerenja);
             this.PanelListaMjerenja.Controls.Add(this.BtnObrisiMjerenja);
-            this.PanelListaMjerenja.Controls.Add(this.textBox3);
-            this.PanelListaMjerenja.Controls.Add(this.textBox2);
-            this.PanelListaMjerenja.Controls.Add(this.textBox1);
+            this.PanelListaMjerenja.Controls.Add(this.TxtPostotakMastiDodajMjerenje);
+            this.PanelListaMjerenja.Controls.Add(this.TxtTežinaDodajMjerenje);
+            this.PanelListaMjerenja.Controls.Add(this.TxtVisinaDodajMjerenje);
             this.PanelListaMjerenja.Controls.Add(this.label4);
             this.PanelListaMjerenja.Controls.Add(this.label3);
             this.PanelListaMjerenja.Controls.Add(this.label2);
             this.PanelListaMjerenja.Controls.Add(this.label1);
-            this.PanelListaMjerenja.Controls.Add(this.DGWMjerenja);
+            this.PanelListaMjerenja.Controls.Add(this.dgvMjerenja);
             this.PanelListaMjerenja.Location = new System.Drawing.Point(0, 0);
             this.PanelListaMjerenja.Margin = new System.Windows.Forms.Padding(0);
             this.PanelListaMjerenja.Name = "PanelListaMjerenja";
@@ -112,6 +112,7 @@
             this.BtnDodajMjerenja.TabIndex = 26;
             this.BtnDodajMjerenja.Text = "Dodaj";
             this.BtnDodajMjerenja.UseVisualStyleBackColor = false;
+            this.BtnDodajMjerenja.Click += new System.EventHandler(this.BtnDodajMjerenja_Click);
             // 
             // BtnObrisiMjerenja
             // 
@@ -129,26 +130,26 @@
             this.BtnObrisiMjerenja.Text = "Obriši";
             this.BtnObrisiMjerenja.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // TxtPostotakMastiDodajMjerenje
             // 
-            this.textBox3.Location = new System.Drawing.Point(137, 376);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 29);
-            this.textBox3.TabIndex = 7;
+            this.TxtPostotakMastiDodajMjerenje.Location = new System.Drawing.Point(137, 376);
+            this.TxtPostotakMastiDodajMjerenje.Name = "TxtPostotakMastiDodajMjerenje";
+            this.TxtPostotakMastiDodajMjerenje.Size = new System.Drawing.Size(143, 29);
+            this.TxtPostotakMastiDodajMjerenje.TabIndex = 7;
             // 
-            // textBox2
+            // TxtTežinaDodajMjerenje
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 341);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 29);
-            this.textBox2.TabIndex = 6;
+            this.TxtTežinaDodajMjerenje.Location = new System.Drawing.Point(137, 341);
+            this.TxtTežinaDodajMjerenje.Name = "TxtTežinaDodajMjerenje";
+            this.TxtTežinaDodajMjerenje.Size = new System.Drawing.Size(143, 29);
+            this.TxtTežinaDodajMjerenje.TabIndex = 6;
             // 
-            // textBox1
+            // TxtVisinaDodajMjerenje
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 305);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 29);
-            this.textBox1.TabIndex = 5;
+            this.TxtVisinaDodajMjerenje.Location = new System.Drawing.Point(137, 305);
+            this.TxtVisinaDodajMjerenje.Name = "TxtVisinaDodajMjerenje";
+            this.TxtVisinaDodajMjerenje.Size = new System.Drawing.Size(143, 29);
+            this.TxtVisinaDodajMjerenje.TabIndex = 5;
             // 
             // label4
             // 
@@ -186,15 +187,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mjerenja:";
             // 
-            // DGWMjerenja
+            // dgvMjerenja
             // 
-            this.DGWMjerenja.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvMjerenja.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGWMjerenja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGWMjerenja.Location = new System.Drawing.Point(13, 33);
-            this.DGWMjerenja.Name = "DGWMjerenja";
-            this.DGWMjerenja.Size = new System.Drawing.Size(267, 260);
-            this.DGWMjerenja.TabIndex = 0;
+            this.dgvMjerenja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMjerenja.Location = new System.Drawing.Point(13, 33);
+            this.dgvMjerenja.Name = "dgvMjerenja";
+            this.dgvMjerenja.Size = new System.Drawing.Size(267, 260);
+            this.dgvMjerenja.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -313,10 +314,11 @@
             this.Name = "Mjerenja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mjerenja";
+            this.Load += new System.EventHandler(this.Mjerenja_Load);
             this.TPanelMjerenja.ResumeLayout(false);
             this.PanelListaMjerenja.ResumeLayout(false);
             this.PanelListaMjerenja.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGWMjerenja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMjerenja)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -330,11 +332,11 @@
 
         private System.Windows.Forms.TableLayoutPanel TPanelMjerenja;
         private System.Windows.Forms.Panel PanelListaMjerenja;
-        private System.Windows.Forms.DataGridView DGWMjerenja;
+        private System.Windows.Forms.DataGridView dgvMjerenja;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtPostotakMastiDodajMjerenje;
+        private System.Windows.Forms.TextBox TxtTežinaDodajMjerenje;
+        private System.Windows.Forms.TextBox TxtVisinaDodajMjerenje;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

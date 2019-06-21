@@ -28,7 +28,7 @@
     <Key>
       <PropertyRef Name="Id_Mjerenje" />
     </Key>
-    <Property Name="Id_Mjerenje" Type="int" Nullable="false" />
+    <Property Name="Id_Mjerenje" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Visina" Type="float" Nullable="false" />
     <Property Name="Tezina" Type="float" Nullable="false" />
     <Property Name="Datum_mjerenja" Type="date" Nullable="false" />

@@ -93,6 +93,7 @@ namespace gymAdmin
         private void BtnMjerenjaKlijenti_Click(object sender, EventArgs e)
         {
             Mjerenja formMjerenja = new Mjerenja();
+            formMjerenja.MojKlijent = getKlijent(); 
             formMjerenja.Show();
         }
 
@@ -105,6 +106,11 @@ namespace gymAdmin
         private void BtnPretraziKlijenti_Click(object sender, EventArgs e)
         {
             OsvjeziFormu();
+        }
+
+        private Klijent getKlijent()
+        {
+            return dgvKlijenti.CurrentRow.DataBoundItem as Klijent;
         }
     }
 }

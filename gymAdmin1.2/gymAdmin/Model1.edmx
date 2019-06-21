@@ -33,7 +33,7 @@
           <Key>
             <PropertyRef Name="Id_Mjerenje" />
           </Key>
-          <Property Name="Id_Mjerenje" Type="int" Nullable="false" />
+          <Property Name="Id_Mjerenje" Type="int" Nullable="false" StoreGeneratedPattern="None" />
           <Property Name="Visina" Type="float" Nullable="false" />
           <Property Name="Tezina" Type="float" Nullable="false" />
           <Property Name="Datum_mjerenja" Type="date" Nullable="false" />
@@ -151,7 +151,7 @@
           <Key>
             <PropertyRef Name="Id_Mjerenje" />
           </Key>
-          <Property Name="Id_Mjerenje" Type="Int32" Nullable="false" />
+          <Property Name="Id_Mjerenje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="Visina" Type="Double" Nullable="false" />
           <Property Name="Tezina" Type="Double" Nullable="false" />
           <Property Name="Datum_mjerenja" Type="DateTime" Nullable="false" Precision="0" />
