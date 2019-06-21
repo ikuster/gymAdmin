@@ -36,6 +36,7 @@
     <Property Name="Datum_mjerenja" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Id_Klijent" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Klijent" Relationship="Self.FK_Mjerenje_Klijent" FromRole="Mjerenje" ToRole="Klijent" />
+    <Property Name="Mast" Type="Double" Nullable="false" />
   </EntityType>
   <EntityType Name="Vrsta_zaposlenika">
     <Key>

@@ -33,9 +33,10 @@
           <Key>
             <PropertyRef Name="Id_Mjerenje" />
           </Key>
-          <Property Name="Id_Mjerenje" Type="int" Nullable="false" StoreGeneratedPattern="None" />
+          <Property Name="Id_Mjerenje" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Visina" Type="float" Nullable="false" />
           <Property Name="Tezina" Type="float" Nullable="false" />
+          <Property Name="Mast" Type="float" Nullable="false" />
           <Property Name="Datum_mjerenja" Type="date" Nullable="false" />
           <Property Name="Id_Klijent" Type="int" Nullable="false" />
         </EntityType>
@@ -157,6 +158,7 @@
           <Property Name="Datum_mjerenja" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Id_Klijent" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Klijent" Relationship="Self.FK_Mjerenje_Klijent" FromRole="Mjerenje" ToRole="Klijent" />
+          <Property Name="Mast" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="Vrsta_zaposlenika">
           <Key>
@@ -273,6 +275,7 @@
           <EntitySetMapping Name="Mjerenje">
             <EntityTypeMapping TypeName="DBModel.Mjerenje">
               <MappingFragment StoreEntitySet="Mjerenje">
+                <ScalarProperty Name="Mast" ColumnName="Mast" />
                 <ScalarProperty Name="Id_Mjerenje" ColumnName="Id_Mjerenje" />
                 <ScalarProperty Name="Visina" ColumnName="Visina" />
                 <ScalarProperty Name="Tezina" ColumnName="Tezina" />

@@ -19,6 +19,7 @@ namespace gymAdmin
         public double Tezina { get; set; }
         public System.DateTime Datum_mjerenja { get; set; }
         public int Id_Klijent { get; set; }
+        public double Mast { get; set; }
     
         public virtual Klijent Klijent { get; set; }
     }

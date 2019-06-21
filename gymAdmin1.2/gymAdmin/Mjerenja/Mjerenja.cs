@@ -26,7 +26,8 @@ namespace gymAdmin
             dgvMjerenja.DataSource = MjerenjaRepozitorij.DohvatiMjerenja(MojKlijent);
             dgvMjerenja.Columns[0].Visible = false;
             dgvMjerenja.Columns[4].Visible = false;
-            dgvMjerenja.Columns[5].Visible = false;
+            dgvMjerenja.Columns[6].Visible = false;
+
         }
 
         public void OcistiFormu()
@@ -54,6 +55,7 @@ namespace gymAdmin
                 Visina = double.Parse(TxtVisinaDodajMjerenje.Text),
                 Tezina = double.Parse(TxtTežinaDodajMjerenje.Text),
                 Datum_mjerenja = DateTime.Now,
+                Mast = double.Parse(TxtPostotakMastiDodajMjerenje.Text),
                 Id_Klijent = MojKlijent.Id_Klijent
             };
 

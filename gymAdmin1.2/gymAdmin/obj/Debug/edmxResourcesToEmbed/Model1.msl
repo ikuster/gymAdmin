@@ -30,6 +30,7 @@
     <EntitySetMapping Name="Mjerenje">
       <EntityTypeMapping TypeName="DBModel.Mjerenje">
         <MappingFragment StoreEntitySet="Mjerenje">
+          <ScalarProperty Name="Mast" ColumnName="Mast" />
           <ScalarProperty Name="Id_Mjerenje" ColumnName="Id_Mjerenje" />
           <ScalarProperty Name="Visina" ColumnName="Visina" />
           <ScalarProperty Name="Tezina" ColumnName="Tezina" />
