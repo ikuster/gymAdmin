@@ -20,13 +20,6 @@ namespace gymAdmin
             zaposlenikIzmjena = odabraniZaposlenik;
             InitializeComponent();
         }
-        private bool ProvjeriUnos()
-        {
-            if (textBoxImeZaposlenik.Text == "" || textBoxPrezimeZaposlenik.Text == "" ||
-                textBoxEmailZaposlenik.Text == "" || textBoxBrMobZaposlenik.Text == "" || textBoxOibZaposlenik.Text == "" ||
-                (groupBoxSpol.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked) == null)) return false;
-            else return true;
-        }
 
         private void IzmjenaZaposlenika_Load(object sender, EventArgs e)
         {
@@ -55,14 +48,65 @@ namespace gymAdmin
                 zaposlenik.Broj_mobitela = textBoxBrMobZaposlenik.Text;
                 zaposlenik.OIB = textBoxOibZaposlenik.Text;
                 zaposlenik.Datum_zaposlenja = dateTimePickerZaposlenje.Value;
-                if (ProvjeriUnos())
-                    {
-                        zaposlenici.UrediUBazi(zaposlenikIzmjena,zaposlenik);
-                        MessageBox.Show("Uspješno ste izmijenili podatke o zaposleniku!");
-                        this.Hide();
-                    }
-                else MessageBox.Show("Sva polja moraju biti popunjena!");
+                zaposlenici.UrediUBazi(zaposlenikIzmjena,zaposlenik);
+                MessageBox.Show("Uspješno ste izmijenili podatke o zaposleniku!");
+                this.Hide();
             
+        }
+
+        private void textBoxImeZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string Ime = textBoxImeZaposlenik.Text;
+            if (Ime.Length < 3 || Ime.Any(char.IsDigit) || Ime.Length > 12)
+            {
+                e.Cancel = true;
+
+            }
+        }
+
+        private void textBoxPrezimeZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string Prezime = textBoxPrezimeZaposlenik.Text;
+            if (Prezime.Length < 3 || Prezime.Any(char.IsDigit) || Prezime.Length > 12)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void groupBoxSpol_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (groupBoxSpol.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked) == null)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void textBoxEmailZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string email = textBoxEmailZaposlenik.Text;
+            if (email.Length < 5 || !email.Contains("@"))
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void textBoxBrMobZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string brMob = textBoxBrMobZaposlenik.Text;
+            if (brMob.Length < 9 || brMob.Any(char.IsLetter) || brMob.Any(char.IsSymbol) || brMob.Length > 11)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void textBoxOibZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string OIB = textBoxOibZaposlenik.Text;
+            if (OIB.Length != 11 || OIB.Any(char.IsLetter) || OIB.Any(char.IsSymbol))
+            {
+                e.Cancel = true;
+            }
         }
 
     }

@@ -124,6 +124,7 @@
             this.textBoxImeZaposlenik.Name = "textBoxImeZaposlenik";
             this.textBoxImeZaposlenik.Size = new System.Drawing.Size(130, 20);
             this.textBoxImeZaposlenik.TabIndex = 9;
+            this.textBoxImeZaposlenik.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxImeZaposlenik_Validating);
             // 
             // textBoxPrezimeZaposlenik
             // 
@@ -131,6 +132,7 @@
             this.textBoxPrezimeZaposlenik.Name = "textBoxPrezimeZaposlenik";
             this.textBoxPrezimeZaposlenik.Size = new System.Drawing.Size(130, 20);
             this.textBoxPrezimeZaposlenik.TabIndex = 10;
+            this.textBoxPrezimeZaposlenik.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPrezimeZaposlenik_Validating);
             // 
             // textBoxEmailZaposlenik
             // 
@@ -138,6 +140,7 @@
             this.textBoxEmailZaposlenik.Name = "textBoxEmailZaposlenik";
             this.textBoxEmailZaposlenik.Size = new System.Drawing.Size(130, 20);
             this.textBoxEmailZaposlenik.TabIndex = 11;
+            this.textBoxEmailZaposlenik.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxEmailZaposlenik_Validating);
             // 
             // textBoxBrMobZaposlenik
             // 
@@ -145,6 +148,7 @@
             this.textBoxBrMobZaposlenik.Name = "textBoxBrMobZaposlenik";
             this.textBoxBrMobZaposlenik.Size = new System.Drawing.Size(130, 20);
             this.textBoxBrMobZaposlenik.TabIndex = 12;
+            this.textBoxBrMobZaposlenik.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxBrMobZaposlenik_Validating);
             // 
             // textBoxOibZaposlenik
             // 
@@ -152,6 +156,7 @@
             this.textBoxOibZaposlenik.Name = "textBoxOibZaposlenik";
             this.textBoxOibZaposlenik.Size = new System.Drawing.Size(130, 20);
             this.textBoxOibZaposlenik.TabIndex = 13;
+            this.textBoxOibZaposlenik.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxOibZaposlenik_Validating);
             // 
             // dateTimePickerZaposlenje
             // 
@@ -208,6 +213,7 @@
             this.groupBoxSpol.Size = new System.Drawing.Size(130, 33);
             this.groupBoxSpol.TabIndex = 30;
             this.groupBoxSpol.TabStop = false;
+            this.groupBoxSpol.Validating += new System.ComponentModel.CancelEventHandler(this.groupBoxSpol_Validating);
             // 
             // NoviZaposlenik
             // 

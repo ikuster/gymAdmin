@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel.DataAnnotations;
 
 namespace gymAdmin
 {
@@ -18,18 +19,9 @@ namespace gymAdmin
         {
             InitializeComponent();
         }
-        private bool ProvjeriUnos()
-        {
-            if (textBoxImeZaposlenik.Text == "" || textBoxPrezimeZaposlenik.Text == "" ||
-                textBoxEmailZaposlenik.Text == "" || textBoxBrMobZaposlenik.Text == "" || textBoxOibZaposlenik.Text == "" ||
-                (groupBoxSpol.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked) == null)) return false;
-            else return true;
-        }
 
         private void buttonDodajZaposlenika2_Click(object sender, EventArgs e)
-        {
-            
-            if (ProvjeriUnos()) {
+        {           
                 List<string> kredencijali = new List<string>();
                 var checkedButton = groupBoxSpol.Controls.OfType<RadioButton>()
                                           .FirstOrDefault(rb => rb.Checked);
@@ -57,19 +49,64 @@ namespace gymAdmin
                     MessageBox.Show("Taj zaposlenik već postoji u bazi!");
                 }
             }
-            else
+            
+            
+            
+        
+        private void textBoxImeZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string Ime = textBoxImeZaposlenik.Text;
+            if (Ime.Length < 3 || Ime.Any(char.IsDigit) || Ime.Length > 12)
             {
-                MessageBox.Show("Sva polja moraju biti unesena!");
-            }
-            
-            
-            
+                e.Cancel=true;
 
+            }
         }
 
-        private void NoviZaposlenik_Load(object sender, EventArgs e)
+        private void textBoxPrezimeZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string Prezime = textBoxPrezimeZaposlenik.Text;
+            if (Prezime.Length < 3 || Prezime.Any(char.IsDigit) || Prezime.Length > 12)
+            {
+                e.Cancel = true;
+                textBoxPrezimeZaposlenik.BackColor = Color.Red;
+            }
+        }
+
+        private void groupBoxSpol_Validating(object sender, CancelEventArgs e)
         {
 
+            if(groupBoxSpol.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked) == null)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void textBoxEmailZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string email = textBoxEmailZaposlenik.Text;
+            if (email.Length < 5 || !email.Contains("@"))
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void textBoxBrMobZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string brMob = textBoxBrMobZaposlenik.Text;
+            if (brMob.Length < 9 || brMob.Any(char.IsLetter) || brMob.Any(char.IsSymbol) || brMob.Length > 11)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void textBoxOibZaposlenik_Validating(object sender, CancelEventArgs e)
+        {
+            string OIB = textBoxOibZaposlenik.Text;
+            if (OIB.Length !=11 || OIB.Any(char.IsLetter) || OIB.Any(char.IsSymbol))
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
