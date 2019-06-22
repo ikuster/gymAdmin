@@ -227,6 +227,11 @@ namespace gymAdmin
             formaNoviZaposlenik.Show();
         }
 
-
+        private void BtnOdjava_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login formaLogin = new Login();
+            formaLogin.ShowDialog();
+        }
     }
 }

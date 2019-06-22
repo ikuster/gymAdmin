@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GymAdmin));
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.BtnOdjava = new System.Windows.Forms.Button();
             this.PanelActive = new System.Windows.Forms.Panel();
             this.BtnPocetna = new System.Windows.Forms.Button();
             this.BtnClanarine = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.PanelMenu.Controls.Add(this.BtnOdjava);
             this.PanelMenu.Controls.Add(this.PanelActive);
             this.PanelMenu.Controls.Add(this.BtnPocetna);
             this.PanelMenu.Controls.Add(this.BtnClanarine);
@@ -92,6 +94,27 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(184, 461);
             this.PanelMenu.TabIndex = 0;
+            // 
+            // BtnOdjava
+            // 
+            this.BtnOdjava.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(43)))));
+            this.BtnOdjava.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnOdjava.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOdjava.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnOdjava.Image = ((System.Drawing.Image)(resources.GetObject("BtnOdjava.Image")));
+            this.BtnOdjava.Location = new System.Drawing.Point(0, 276);
+            this.BtnOdjava.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnOdjava.Name = "BtnOdjava";
+            this.BtnOdjava.Size = new System.Drawing.Size(184, 69);
+            this.BtnOdjava.TabIndex = 22;
+            this.BtnOdjava.Text = "Odjava";
+            this.BtnOdjava.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnOdjava.UseVisualStyleBackColor = false;
+            this.BtnOdjava.Click += new System.EventHandler(this.BtnOdjava_Click);
             // 
             // PanelActive
             // 
@@ -752,6 +775,7 @@
         private System.Windows.Forms.Label LabelPrijavljeniKorisnik;
         private System.Windows.Forms.LinkLabel LabelLinkPomoc;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnOdjava;
     }
 }
 

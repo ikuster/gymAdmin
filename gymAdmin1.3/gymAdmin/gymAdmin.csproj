@@ -133,7 +133,7 @@
     <Compile Include="Zaposlenici\NoviZaposlenik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Zaposlenici\NoviZaposlenik.Designer.cs">
+    <Compile Include="Zaposlenici\NoviZaposlenik.designer.cs">
       <DependentUpon>NoviZaposlenik.cs</DependentUpon>
     </Compile>
     <Compile Include="PotvrdaBrisanja.cs">
