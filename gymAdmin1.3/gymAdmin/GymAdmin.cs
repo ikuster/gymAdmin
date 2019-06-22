@@ -44,7 +44,7 @@ namespace gymAdmin
             }
             else
             {
-                MessageBox.Show("Nemate prava!");
+                MessageBox.Show("Nemate potrebna ovlaštenja!");
             }
         }
 
@@ -179,14 +179,8 @@ namespace gymAdmin
 
         private void textBoxPretraga_TextChanged(object sender, EventArgs e)
         {
-            using (var baza = new Entities())
-            {
-                var upitPretraga = from z in baza.Zaposlenik
-                                   where z.Prezime.Contains(textBoxPretraga.Text) ||
-                                   z.Ime.Contains(textBoxPretraga.Text)
-                                   select z;
-                dgvZaposlenici.DataSource = upitPretraga.ToList();
-            }
+            
+            dgvZaposlenici.DataSource = zaposlenici.PretraziZaposlenike(textBoxPretraga.Text);
             dgvZaposlenici.Columns[4].Visible = false;
             dgvZaposlenici.Columns[10].Visible = false;
             dgvZaposlenici.Columns[11].Visible = false;

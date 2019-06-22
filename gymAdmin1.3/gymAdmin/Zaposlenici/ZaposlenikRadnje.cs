@@ -20,13 +20,13 @@ namespace gymAdmin
             return lozinka;
 
         }
-        private int ProvjeriPrijeDodavanja(string korIme)
+        private int ProvjeriPrijeDodavanja(string OIB)
         {
             int upitPostoji;
             using (var baza=new Entities())
             {
                 upitPostoji = (from z in baza.Zaposlenik
-                               where z.Korisnicko_ime == korIme
+                               where z.OIB == OIB
                                select z).Count();
             }
             return upitPostoji;
@@ -108,7 +108,7 @@ namespace gymAdmin
 
             using(var baza = new Entities())
             {
-                if (ProvjeriPrijeDodavanja(noviZaposlenik.Korisnicko_ime)==0) {
+                if (ProvjeriPrijeDodavanja(noviZaposlenik.OIB)==0) {
 
                     Zaposlenik zaposlenik = new Zaposlenik
                     {
@@ -133,9 +133,20 @@ namespace gymAdmin
                     return vecPostoji;
                 }
             }
+        }
 
+        public List<Zaposlenik> PretraziZaposlenike(string ime)
+        {
+            List<Zaposlenik> zaposlenici;
 
-
+            using (var context = new Entities())
+            {
+                var upit = from z in context.Zaposlenik
+                           where z.Ime.Contains(ime)
+                           select z;
+                zaposlenici = upit.ToList();
+            }
+            return zaposlenici;
         }
 
         public string GenerirajHash(string lozinka)
