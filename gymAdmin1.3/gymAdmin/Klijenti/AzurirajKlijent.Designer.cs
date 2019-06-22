@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelDetaljiKlijentStatic = new System.Windows.Forms.Panel();
+            this.comboBoxClanarina = new System.Windows.Forms.ComboBox();
             this.labelDatumIsteka = new System.Windows.Forms.Label();
             this.labelDatumUclanjenja = new System.Windows.Forms.Label();
             this.rBZenski = new System.Windows.Forms.RadioButton();
@@ -47,7 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxClanarina = new System.Windows.Forms.ComboBox();
             this.PanelDetaljiKlijentStatic.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,30 +79,43 @@
             this.PanelDetaljiKlijentStatic.Size = new System.Drawing.Size(333, 358);
             this.PanelDetaljiKlijentStatic.TabIndex = 0;
             // 
+            // comboBoxClanarina
+            // 
+            this.comboBoxClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxClanarina.FormattingEnabled = true;
+            this.comboBoxClanarina.Location = new System.Drawing.Point(112, 190);
+            this.comboBoxClanarina.Name = "comboBoxClanarina";
+            this.comboBoxClanarina.Size = new System.Drawing.Size(209, 28);
+            this.comboBoxClanarina.TabIndex = 53;
+            this.comboBoxClanarina.SelectedIndexChanged += new System.EventHandler(this.comboBoxClanarina_SelectedIndexChanged);
+            // 
             // labelDatumIsteka
             // 
             this.labelDatumIsteka.AutoSize = true;
-            this.labelDatumIsteka.Location = new System.Drawing.Point(128, 279);
+            this.labelDatumIsteka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatumIsteka.Location = new System.Drawing.Point(108, 263);
             this.labelDatumIsteka.Name = "labelDatumIsteka";
-            this.labelDatumIsteka.Size = new System.Drawing.Size(42, 21);
+            this.labelDatumIsteka.Size = new System.Drawing.Size(42, 20);
             this.labelDatumIsteka.TabIndex = 52;
             this.labelDatumIsteka.Text = "istek";
             // 
             // labelDatumUclanjenja
             // 
             this.labelDatumUclanjenja.AutoSize = true;
-            this.labelDatumUclanjenja.Location = new System.Drawing.Point(127, 248);
+            this.labelDatumUclanjenja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatumUclanjenja.Location = new System.Drawing.Point(108, 230);
             this.labelDatumUclanjenja.Name = "labelDatumUclanjenja";
-            this.labelDatumUclanjenja.Size = new System.Drawing.Size(80, 21);
+            this.labelDatumUclanjenja.Size = new System.Drawing.Size(80, 20);
             this.labelDatumUclanjenja.TabIndex = 51;
             this.labelDatumUclanjenja.Text = "uclanjenje";
             // 
             // rBZenski
             // 
             this.rBZenski.AutoSize = true;
-            this.rBZenski.Location = new System.Drawing.Point(204, 104);
+            this.rBZenski.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBZenski.Location = new System.Drawing.Point(210, 81);
             this.rBZenski.Name = "rBZenski";
-            this.rBZenski.Size = new System.Drawing.Size(73, 25);
+            this.rBZenski.Size = new System.Drawing.Size(74, 24);
             this.rBZenski.TabIndex = 49;
             this.rBZenski.TabStop = true;
             this.rBZenski.Text = "Ženski";
@@ -111,9 +124,10 @@
             // rBMuski
             // 
             this.rBMuski.AutoSize = true;
-            this.rBMuski.Location = new System.Drawing.Point(128, 104);
+            this.rBMuski.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBMuski.Location = new System.Drawing.Point(112, 83);
             this.rBMuski.Name = "rBMuski";
-            this.rBMuski.Size = new System.Drawing.Size(70, 25);
+            this.rBMuski.Size = new System.Drawing.Size(68, 24);
             this.rBMuski.TabIndex = 48;
             this.rBMuski.TabStop = true;
             this.rBMuski.Text = "Muški";
@@ -121,33 +135,37 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(128, 174);
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(112, 152);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(146, 29);
+            this.textBoxEmail.Size = new System.Drawing.Size(209, 26);
             this.textBoxEmail.TabIndex = 47;
             this.textBoxEmail.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxEmail_Validating);
             // 
             // textBoxTelefon
             // 
-            this.textBoxTelefon.Location = new System.Drawing.Point(128, 134);
+            this.textBoxTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefon.Location = new System.Drawing.Point(112, 117);
             this.textBoxTelefon.Name = "textBoxTelefon";
-            this.textBoxTelefon.Size = new System.Drawing.Size(146, 29);
+            this.textBoxTelefon.Size = new System.Drawing.Size(209, 26);
             this.textBoxTelefon.TabIndex = 46;
             this.textBoxTelefon.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxTelefon_Validating);
             // 
             // textBoxPrezime
             // 
-            this.textBoxPrezime.Location = new System.Drawing.Point(128, 61);
+            this.textBoxPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrezime.Location = new System.Drawing.Point(112, 49);
             this.textBoxPrezime.Name = "textBoxPrezime";
-            this.textBoxPrezime.Size = new System.Drawing.Size(146, 29);
+            this.textBoxPrezime.Size = new System.Drawing.Size(209, 26);
             this.textBoxPrezime.TabIndex = 45;
             this.textBoxPrezime.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPrezime_Validating);
             // 
             // textBoxIme
             // 
-            this.textBoxIme.Location = new System.Drawing.Point(128, 20);
+            this.textBoxIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIme.Location = new System.Drawing.Point(112, 17);
             this.textBoxIme.Name = "textBoxIme";
-            this.textBoxIme.Size = new System.Drawing.Size(146, 29);
+            this.textBoxIme.Size = new System.Drawing.Size(209, 26);
             this.textBoxIme.TabIndex = 44;
             this.textBoxIme.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxIme_Validating);
             // 
@@ -158,8 +176,9 @@
             this.BtnOdustaniDetaljiKlijent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnOdustaniDetaljiKlijent.FlatAppearance.BorderSize = 0;
             this.BtnOdustaniDetaljiKlijent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOdustaniDetaljiKlijent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOdustaniDetaljiKlijent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnOdustaniDetaljiKlijent.Location = new System.Drawing.Point(23, 310);
+            this.BtnOdustaniDetaljiKlijent.Location = new System.Drawing.Point(15, 301);
             this.BtnOdustaniDetaljiKlijent.Margin = new System.Windows.Forms.Padding(0);
             this.BtnOdustaniDetaljiKlijent.Name = "BtnOdustaniDetaljiKlijent";
             this.BtnOdustaniDetaljiKlijent.Size = new System.Drawing.Size(139, 29);
@@ -175,8 +194,9 @@
             this.BtnUrediDetaljiKlijent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUrediDetaljiKlijent.FlatAppearance.BorderSize = 0;
             this.BtnUrediDetaljiKlijent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUrediDetaljiKlijent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUrediDetaljiKlijent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnUrediDetaljiKlijent.Location = new System.Drawing.Point(173, 310);
+            this.BtnUrediDetaljiKlijent.Location = new System.Drawing.Point(182, 300);
             this.BtnUrediDetaljiKlijent.Margin = new System.Windows.Forms.Padding(0);
             this.BtnUrediDetaljiKlijent.Name = "BtnUrediDetaljiKlijent";
             this.BtnUrediDetaljiKlijent.Size = new System.Drawing.Size(139, 29);
@@ -188,89 +208,88 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(77, 279);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(11, 263);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 21);
+            this.label12.Size = new System.Drawing.Size(48, 20);
             this.label12.TabIndex = 30;
             this.label12.Text = "Istek:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(42, 213);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 193);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 21);
+            this.label11.Size = new System.Drawing.Size(80, 20);
             this.label11.TabIndex = 29;
             this.label11.Text = "Članarina:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(36, 248);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 230);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 21);
+            this.label10.Size = new System.Drawing.Size(87, 20);
             this.label10.TabIndex = 28;
             this.label10.Text = "Učlanjenje:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(71, 177);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 155);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 21);
+            this.label8.Size = new System.Drawing.Size(52, 20);
             this.label8.TabIndex = 27;
             this.label8.Text = "Email:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(60, 137);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 120);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 21);
+            this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 26;
             this.label7.Text = "Telefon:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(77, 104);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 85);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 21);
+            this.label6.Size = new System.Drawing.Size(45, 20);
             this.label6.TabIndex = 25;
             this.label6.Text = "Spol:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 61);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 52);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 21);
+            this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 23;
             this.label4.Text = "Prezime:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 20);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 21);
+            this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 22;
             this.label1.Text = "Ime:";
-            // 
-            // comboBoxClanarina
-            // 
-            this.comboBoxClanarina.FormattingEnabled = true;
-            this.comboBoxClanarina.Location = new System.Drawing.Point(128, 213);
-            this.comboBoxClanarina.Name = "comboBoxClanarina";
-            this.comboBoxClanarina.Size = new System.Drawing.Size(121, 29);
-            this.comboBoxClanarina.TabIndex = 53;
-            this.comboBoxClanarina.SelectedIndexChanged += new System.EventHandler(this.comboBoxClanarina_SelectedIndexChanged);
             // 
             // AzurirajKlijent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 368);
+            this.ClientSize = new System.Drawing.Size(334, 341);
             this.Controls.Add(this.PanelDetaljiKlijentStatic);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

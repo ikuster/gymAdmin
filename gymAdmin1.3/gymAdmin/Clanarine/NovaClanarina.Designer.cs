@@ -40,8 +40,8 @@
             this.LabelTrajanjeNovaClanarina = new System.Windows.Forms.Label();
             this.LabelNazivNovaClanarina = new System.Windows.Forms.Label();
             this.LabelValidation1 = new System.Windows.Forms.Label();
-            this.LabelValidation0 = new System.Windows.Forms.Label();
             this.LabelValidation2 = new System.Windows.Forms.Label();
+            this.LabelValidation0 = new System.Windows.Forms.Label();
             this.PanelNovaClanarina.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,7 @@
             this.BtnOdustaniNovaClanarina.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnOdustaniNovaClanarina.FlatAppearance.BorderSize = 0;
             this.BtnOdustaniNovaClanarina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOdustaniNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOdustaniNovaClanarina.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnOdustaniNovaClanarina.Location = new System.Drawing.Point(17, 323);
             this.BtnOdustaniNovaClanarina.Margin = new System.Windows.Forms.Padding(0);
@@ -94,6 +95,7 @@
             this.BtnDodajNovaClanarina.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDodajNovaClanarina.FlatAppearance.BorderSize = 0;
             this.BtnDodajNovaClanarina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDodajNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDodajNovaClanarina.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnDodajNovaClanarina.Location = new System.Drawing.Point(149, 323);
             this.BtnDodajNovaClanarina.Margin = new System.Windows.Forms.Padding(0);
@@ -106,6 +108,7 @@
             // 
             // TxtOpisNovaClanarina
             // 
+            this.TxtOpisNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtOpisNovaClanarina.Location = new System.Drawing.Point(92, 142);
             this.TxtOpisNovaClanarina.Multiline = true;
             this.TxtOpisNovaClanarina.Name = "TxtOpisNovaClanarina";
@@ -114,61 +117,68 @@
             // 
             // TxtCijenaNovaClanarina
             // 
+            this.TxtCijenaNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCijenaNovaClanarina.Location = new System.Drawing.Point(92, 102);
             this.TxtCijenaNovaClanarina.Name = "TxtCijenaNovaClanarina";
-            this.TxtCijenaNovaClanarina.Size = new System.Drawing.Size(181, 29);
+            this.TxtCijenaNovaClanarina.Size = new System.Drawing.Size(181, 26);
             this.TxtCijenaNovaClanarina.TabIndex = 6;
             this.TxtCijenaNovaClanarina.TextChanged += new System.EventHandler(this.TxtCijenaNovaClanarina_TextChanged);
             // 
             // TxtTrajanjeNovaClanarina
             // 
+            this.TxtTrajanjeNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTrajanjeNovaClanarina.Location = new System.Drawing.Point(92, 57);
             this.TxtTrajanjeNovaClanarina.Name = "TxtTrajanjeNovaClanarina";
-            this.TxtTrajanjeNovaClanarina.Size = new System.Drawing.Size(181, 29);
+            this.TxtTrajanjeNovaClanarina.Size = new System.Drawing.Size(181, 26);
             this.TxtTrajanjeNovaClanarina.TabIndex = 5;
             this.TxtTrajanjeNovaClanarina.TextChanged += new System.EventHandler(this.TxtTrajanjeNovaClanarina_TextChanged);
             // 
             // TxtNazivNovaClanarina
             // 
+            this.TxtNazivNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNazivNovaClanarina.Location = new System.Drawing.Point(92, 19);
             this.TxtNazivNovaClanarina.Name = "TxtNazivNovaClanarina";
-            this.TxtNazivNovaClanarina.Size = new System.Drawing.Size(181, 29);
+            this.TxtNazivNovaClanarina.Size = new System.Drawing.Size(181, 26);
             this.TxtNazivNovaClanarina.TabIndex = 4;
             this.TxtNazivNovaClanarina.TextChanged += new System.EventHandler(this.TxtNazivNovaClanarina_TextChanged);
             // 
             // LabelOpisNovaClanarina
             // 
             this.LabelOpisNovaClanarina.AutoSize = true;
+            this.LabelOpisNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelOpisNovaClanarina.Location = new System.Drawing.Point(13, 142);
             this.LabelOpisNovaClanarina.Name = "LabelOpisNovaClanarina";
-            this.LabelOpisNovaClanarina.Size = new System.Drawing.Size(45, 21);
+            this.LabelOpisNovaClanarina.Size = new System.Drawing.Size(45, 20);
             this.LabelOpisNovaClanarina.TabIndex = 3;
             this.LabelOpisNovaClanarina.Text = "Opis:";
             // 
             // LabelCijenaNovaClanarina
             // 
             this.LabelCijenaNovaClanarina.AutoSize = true;
+            this.LabelCijenaNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelCijenaNovaClanarina.Location = new System.Drawing.Point(13, 102);
             this.LabelCijenaNovaClanarina.Name = "LabelCijenaNovaClanarina";
-            this.LabelCijenaNovaClanarina.Size = new System.Drawing.Size(56, 21);
+            this.LabelCijenaNovaClanarina.Size = new System.Drawing.Size(57, 20);
             this.LabelCijenaNovaClanarina.TabIndex = 2;
             this.LabelCijenaNovaClanarina.Text = "Cijena:";
             // 
             // LabelTrajanjeNovaClanarina
             // 
             this.LabelTrajanjeNovaClanarina.AutoSize = true;
+            this.LabelTrajanjeNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelTrajanjeNovaClanarina.Location = new System.Drawing.Point(13, 60);
             this.LabelTrajanjeNovaClanarina.Name = "LabelTrajanjeNovaClanarina";
-            this.LabelTrajanjeNovaClanarina.Size = new System.Drawing.Size(67, 21);
+            this.LabelTrajanjeNovaClanarina.Size = new System.Drawing.Size(69, 20);
             this.LabelTrajanjeNovaClanarina.TabIndex = 1;
             this.LabelTrajanjeNovaClanarina.Text = "Trajanje:";
             // 
             // LabelNazivNovaClanarina
             // 
             this.LabelNazivNovaClanarina.AutoSize = true;
+            this.LabelNazivNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelNazivNovaClanarina.Location = new System.Drawing.Point(13, 19);
             this.LabelNazivNovaClanarina.Name = "LabelNazivNovaClanarina";
-            this.LabelNazivNovaClanarina.Size = new System.Drawing.Size(52, 21);
+            this.LabelNazivNovaClanarina.Size = new System.Drawing.Size(51, 20);
             this.LabelNazivNovaClanarina.TabIndex = 0;
             this.LabelNazivNovaClanarina.Text = "Naziv:";
             // 
@@ -183,17 +193,6 @@
             this.LabelValidation1.TabIndex = 27;
             this.LabelValidation1.Text = "validation_lab.l._...";
             // 
-            // LabelValidation0
-            // 
-            this.LabelValidation0.AutoSize = true;
-            this.LabelValidation0.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelValidation0.ForeColor = System.Drawing.Color.DarkRed;
-            this.LabelValidation0.Location = new System.Drawing.Point(93, 19);
-            this.LabelValidation0.Name = "LabelValidation0";
-            this.LabelValidation0.Size = new System.Drawing.Size(179, 30);
-            this.LabelValidation0.TabIndex = 28;
-            this.LabelValidation0.Text = "validation_lab.l._...";
-            // 
             // LabelValidation2
             // 
             this.LabelValidation2.AutoSize = true;
@@ -204,6 +203,17 @@
             this.LabelValidation2.Size = new System.Drawing.Size(179, 30);
             this.LabelValidation2.TabIndex = 29;
             this.LabelValidation2.Text = "validation_lab.l._...";
+            // 
+            // LabelValidation0
+            // 
+            this.LabelValidation0.AutoSize = true;
+            this.LabelValidation0.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelValidation0.ForeColor = System.Drawing.Color.DarkRed;
+            this.LabelValidation0.Location = new System.Drawing.Point(93, 19);
+            this.LabelValidation0.Name = "LabelValidation0";
+            this.LabelValidation0.Size = new System.Drawing.Size(179, 30);
+            this.LabelValidation0.TabIndex = 28;
+            this.LabelValidation0.Text = "validation_lab.l._...";
             // 
             // NovaClanarina
             // 
