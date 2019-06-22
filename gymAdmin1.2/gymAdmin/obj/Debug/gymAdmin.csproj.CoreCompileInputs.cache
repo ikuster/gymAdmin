@@ -1,1 +1,15 @@
-a5c2a7948f6d0b20953806e053b117fd0ee5c39a
+label naziv dgv: loc: 13,27
+dgv: size: 770, 227, margin: 15, loc: 15, 56
+label pretrazi: loc: 420,27
+txt pretrazi: size: 223, 26, loc: 562, 24
+
+btn skroz desni: loc: 646, 292
+btn drugi desni: loc: 489, 292
+
+font:
+size:
+
+panel color: controlLight
+
+panel loc:
+184,0
