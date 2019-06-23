@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clanarina">
+    <Key>
+      <PropertyRef Name="Id_Clanarina" />
+    </Key>
+    <Property Name="Id_Clanarina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Trajanje" Type="Int32" Nullable="false" />
+    <Property Name="Cijena" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klijent">
+    <Key>
+      <PropertyRef Name="Id_Klijent" />
+    </Key>
+    <Property Name="Id_Klijent" Type="Int32" Nullable="false" />
+    <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Spol" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Broj_mobitela" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Datum_uclanjenja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Id_Clanarina" Type="Int32" />
+    <Property Name="Datum_isteka_clanarine" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Clanarina" Relationship="Self.FK_Klijent_Clanarina" FromRole="Klijent" ToRole="Clanarina" />
+    <NavigationProperty Name="Mjerenje" Relationship="Self.FK_Mjerenje_Klijent" FromRole="Klijent" ToRole="Mjerenje" />
+  </EntityType>
+  <EntityType Name="Mjerenje">
+    <Key>
+      <PropertyRef Name="Id_Mjerenje" />
+    </Key>
+    <Property Name="Id_Mjerenje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Visina" Type="Double" Nullable="false" />
+    <Property Name="Tezina" Type="Double" Nullable="false" />
+    <Property Name="Datum_mjerenja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Id_Klijent" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Klijent" Relationship="Self.FK_Mjerenje_Klijent" FromRole="Mjerenje" ToRole="Klijent" />
+    <Property Name="Mast" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vrsta_zaposlenika">
+    <Key>
+      <PropertyRef Name="Id_VrstaZaposlenika" />
+    </Key>
+    <Property Name="Id_VrstaZaposlenika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Zaposlenik" Relationship="Self.FK_Zaposlenik_Vrsta_zaposlenika" FromRole="Vrsta_zaposlenika" ToRole="Zaposlenik" />
+  </EntityType>
+  <EntityType Name="Zaposlenik">
+    <Key>
+      <PropertyRef Name="Id_Zaposlenik" />
+    </Key>
+    <Property Name="Id_Zaposlenik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Korisnicko_ime" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Lozinka" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Spol" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Broj_mobitela" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OIB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Datum_zaposlenja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Id_VrstaZaposlenika" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Vrsta_zaposlenika" Relationship="Self.FK_Zaposlenik_Vrsta_zaposlenika" FromRole="Zaposlenik" ToRole="Vrsta_zaposlenika" />
+  </EntityType>
+  <Association Name="FK_Klijent_Clanarina">
+    <End Role="Clanarina" Type="Self.Clanarina" Multiplicity="0..1" />
+    <End Role="Klijent" Type="Self.Klijent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clanarina">
+        <PropertyRef Name="Id_Clanarina" />
+      </Principal>
+      <Dependent Role="Klijent">
+        <PropertyRef Name="Id_Clanarina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mjerenje_Klijent">
+    <End Role="Klijent" Type="Self.Klijent" Multiplicity="1" />
+    <End Role="Mjerenje" Type="Self.Mjerenje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klijent">
+        <PropertyRef Name="Id_Klijent" />
+      </Principal>
+      <Dependent Role="Mjerenje">
+        <PropertyRef Name="Id_Klijent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zaposlenik_Vrsta_zaposlenika">
+    <End Role="Vrsta_zaposlenika" Type="Self.Vrsta_zaposlenika" Multiplicity="1" />
+    <End Role="Zaposlenik" Type="Self.Zaposlenik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vrsta_zaposlenika">
+        <PropertyRef Name="Id_VrstaZaposlenika" />
+      </Principal>
+      <Dependent Role="Zaposlenik">
+        <PropertyRef Name="Id_VrstaZaposlenika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clanarina" EntityType="Self.Clanarina" />
+    <EntitySet Name="Klijent" EntityType="Self.Klijent" />
+    <EntitySet Name="Mjerenje" EntityType="Self.Mjerenje" />
+    <EntitySet Name="Vrsta_zaposlenika" EntityType="Self.Vrsta_zaposlenika" />
+    <EntitySet Name="Zaposlenik" EntityType="Self.Zaposlenik" />
+    <AssociationSet Name="FK_Klijent_Clanarina" Association="Self.FK_Klijent_Clanarina">
+      <End Role="Clanarina" EntitySet="Clanarina" />
+      <End Role="Klijent" EntitySet="Klijent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mjerenje_Klijent" Association="Self.FK_Mjerenje_Klijent">
+      <End Role="Klijent" EntitySet="Klijent" />
+      <End Role="Mjerenje" EntitySet="Mjerenje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zaposlenik_Vrsta_zaposlenika" Association="Self.FK_Zaposlenik_Vrsta_zaposlenika">
+      <End Role="Vrsta_zaposlenika" EntitySet="Vrsta_zaposlenika" />
+      <End Role="Zaposlenik" EntitySet="Zaposlenik" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
