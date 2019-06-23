@@ -9,6 +9,7 @@ namespace gymAdmin
 {
     public class ClanarinaRepozitorij
     {
+        public KlijentiRepozitorij klijenti = new KlijentiRepozitorij();
 
         public List<Clanarina> DohvatiClanarine()
         {
@@ -70,13 +71,20 @@ namespace gymAdmin
 
         public void ObrisiClanarinu(Clanarina clanarina)
         {
-            using (var db = new Entities())
-            {
-                db.Clanarina.Attach(clanarina);
-                db.Clanarina.Remove(clanarina);
-                db.SaveChanges();
+            int brojNađenih = klijenti.DohvatiKlijenta(clanarina);
+            if (brojNađenih == 0) {
+                using (var db = new Entities())
+                {
+                    db.Clanarina.Attach(clanarina);
+                    db.Clanarina.Remove(clanarina);
+                    db.SaveChanges();
+                }
+
             }
-            
+            else
+            {
+                MessageBox.Show("Ne možete obrisati članarinu koju ima klijent!");
+            }
         }
 
         public List<Clanarina> PretraziClanarinu(string ime)

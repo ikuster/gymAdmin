@@ -55,5 +55,18 @@ namespace gymAdmin
 
             }
         }
+        public int DohvatiKlijenta(Clanarina clanarina)
+        {
+            int broj;
+            using (var db = new Entities())
+            {
+                broj = (from a in db.Klijent
+                        where a.Id_Clanarina==clanarina.Id_Clanarina
+                        select a).Count();
+
+
+            }
+            return broj;
+        }
     }
 }
