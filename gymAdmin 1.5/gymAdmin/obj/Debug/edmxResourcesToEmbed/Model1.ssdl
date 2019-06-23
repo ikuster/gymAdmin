@@ -71,7 +71,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Mjerenje_Klijent">
-    <End Role="Klijent" Type="Self.Klijent" Multiplicity="1" />
+    <End Role="Klijent" Type="Self.Klijent" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Mjerenje" Type="Self.Mjerenje" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Klijent">

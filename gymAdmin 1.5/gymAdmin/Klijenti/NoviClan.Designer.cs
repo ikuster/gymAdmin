@@ -207,6 +207,7 @@
             this.CboxVrstaClanarineNoviClan.Name = "CboxVrstaClanarineNoviClan";
             this.CboxVrstaClanarineNoviClan.Size = new System.Drawing.Size(213, 28);
             this.CboxVrstaClanarineNoviClan.TabIndex = 10;
+            this.CboxVrstaClanarineNoviClan.SelectedIndexChanged += new System.EventHandler(this.CboxVrstaClanarineNoviClan_SelectedIndexChanged);
             // 
             // LblDatumUclanjenjaNoviClan
             // 

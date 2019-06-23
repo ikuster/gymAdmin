@@ -64,12 +64,6 @@ namespace gymAdmin
             this.Close();
         }
 
-        private void CboxVrstaClanarineNoviClan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Clanarina clanarina = CboxVrstaClanarineNoviClan.SelectedItem as Clanarina;
-            LblIstekClanarineNoviClan.Text = izracunajIstek(clanarina).ToString("d/M/yy");
-        }
-
         private void TboxImeNoviClan_Validating(object sender, CancelEventArgs e)
         {
             string Ime = TboxImeNoviClan.Text;
@@ -111,6 +105,12 @@ namespace gymAdmin
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\helpNoviKlijent.html", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             Help.ShowHelp(this, FileName);
+        }
+
+        private void CboxVrstaClanarineNoviClan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Clanarina clanarina = CboxVrstaClanarineNoviClan.SelectedItem as Clanarina;
+            LblIstekClanarineNoviClan.Text = izracunajIstek(clanarina).ToString("d/M/yy");
         }
     }
 }
