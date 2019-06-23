@@ -65,11 +65,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
             this.PanelPocetna = new System.Windows.Forms.Panel();
-            this.LabelLinkPomoc = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
-            this.LabelPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.LabelPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
@@ -631,7 +630,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelPocetna.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PanelPocetna.Controls.Add(this.LabelLinkPomoc);
             this.PanelPocetna.Controls.Add(this.label7);
             this.PanelPocetna.Controls.Add(this.LabelPrijavljeniKorisnik);
             this.PanelPocetna.Controls.Add(this.label6);
@@ -643,41 +641,19 @@
             this.PanelPocetna.Size = new System.Drawing.Size(801, 461);
             this.PanelPocetna.TabIndex = 28;
             // 
-            // LabelLinkPomoc
-            // 
-            this.LabelLinkPomoc.AutoSize = true;
-            this.LabelLinkPomoc.Location = new System.Drawing.Point(491, 408);
-            this.LabelLinkPomoc.Name = "LabelLinkPomoc";
-            this.LabelLinkPomoc.Size = new System.Drawing.Size(36, 20);
-            this.LabelLinkPomoc.TabIndex = 4;
-            this.LabelLinkPomoc.TabStop = true;
-            this.LabelLinkPomoc.Text = "link.";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label7.Location = new System.Drawing.Point(185, 388);
+            this.label7.Location = new System.Drawing.Point(132, 432);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(442, 40);
+            this.label7.Size = new System.Drawing.Size(612, 20);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Ukoliko vam je potrebna pomoć, možete je dobiti pritiskom na \r\ntipku F1 ili kliko" +
-    "m na ovaj ";
+            this.label7.Text = "Ukoliko vam je u nekom trenutku potrebna pomoć, možete je dobiti klikom na tipku " +
+    "F1.\r\n";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LabelPrijavljeniKorisnik
-            // 
-            this.LabelPrijavljeniKorisnik.AutoSize = true;
-            this.LabelPrijavljeniKorisnik.BackColor = System.Drawing.Color.Transparent;
-            this.LabelPrijavljeniKorisnik.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPrijavljeniKorisnik.ForeColor = System.Drawing.Color.Red;
-            this.LabelPrijavljeniKorisnik.Location = new System.Drawing.Point(475, 138);
-            this.LabelPrijavljeniKorisnik.Name = "LabelPrijavljeniKorisnik";
-            this.LabelPrijavljeniKorisnik.Size = new System.Drawing.Size(156, 24);
-            this.LabelPrijavljeniKorisnik.TabIndex = 2;
-            this.LabelPrijavljeniKorisnik.Text = "nepoznat korisnik";
-            this.LabelPrijavljeniKorisnik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -702,16 +678,28 @@
             this.label5.Text = "Dobrodošli u GymAdmin!";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // LabelPrijavljeniKorisnik
+            // 
+            this.LabelPrijavljeniKorisnik.AutoSize = true;
+            this.LabelPrijavljeniKorisnik.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrijavljeniKorisnik.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPrijavljeniKorisnik.ForeColor = System.Drawing.Color.Red;
+            this.LabelPrijavljeniKorisnik.Location = new System.Drawing.Point(475, 138);
+            this.LabelPrijavljeniKorisnik.Name = "LabelPrijavljeniKorisnik";
+            this.LabelPrijavljeniKorisnik.Size = new System.Drawing.Size(0, 24);
+            this.LabelPrijavljeniKorisnik.TabIndex = 2;
+            this.LabelPrijavljeniKorisnik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GymAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.PanelMenu);
-            this.Controls.Add(this.PanelClanarine);
-            this.Controls.Add(this.PanelKlijenti);
             this.Controls.Add(this.PanelPocetna);
             this.Controls.Add(this.PanelZaposlenici);
+            this.Controls.Add(this.PanelClanarine);
+            this.Controls.Add(this.PanelKlijenti);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -774,11 +762,9 @@
         private System.Windows.Forms.Panel PanelPocetna;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label LabelPrijavljeniKorisnik;
-        private System.Windows.Forms.LinkLabel LabelLinkPomoc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnOdjava;
-
+        private System.Windows.Forms.Label LabelPrijavljeniKorisnik;
     }
 }
 

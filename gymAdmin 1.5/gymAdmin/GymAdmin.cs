@@ -245,5 +245,10 @@ namespace gymAdmin
             string FileName = string.Format("{0}Resources\\helpClanarina.html", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             Help.ShowHelp(this, FileName);
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
