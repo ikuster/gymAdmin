@@ -77,17 +77,17 @@ namespace gymAdmin
                 baza.SaveChanges();
             }
         }
-        public void UrediUBazi(Zaposlenik odabraniZaposlenik,Zaposlenik izmjene) {
+        public void UrediUBazi(Zaposlenik zaposlenikIzmjena,Zaposlenik izmjene) {
             using(var context = new Entities())
             {
-                context.Zaposlenik.Attach(odabraniZaposlenik);
-                odabraniZaposlenik.Ime = izmjene.Ime;
-                odabraniZaposlenik.Prezime = izmjene.Prezime;
-                odabraniZaposlenik.Spol = izmjene.Spol;
-                odabraniZaposlenik.Email = izmjene.Email;
-                odabraniZaposlenik.Broj_mobitela = izmjene.Broj_mobitela;
-                odabraniZaposlenik.OIB = izmjene.OIB;
-                odabraniZaposlenik.Datum_zaposlenja = izmjene.Datum_zaposlenja;
+                context.Zaposlenik.Attach(zaposlenikIzmjena);
+                zaposlenikIzmjena.Ime = izmjene.Ime;
+                zaposlenikIzmjena.Prezime = izmjene.Prezime;
+                zaposlenikIzmjena.Spol = izmjene.Spol;
+                zaposlenikIzmjena.Email = izmjene.Email;
+                zaposlenikIzmjena.Broj_mobitela = izmjene.Broj_mobitela;
+                zaposlenikIzmjena.OIB = izmjene.OIB;
+                zaposlenikIzmjena.Datum_zaposlenja = izmjene.Datum_zaposlenja;
                 context.SaveChanges();
             }
             

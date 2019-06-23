@@ -24,16 +24,15 @@ namespace gymAdmin
 
         private void IzmjenaZaposlenika_Load(object sender, EventArgs e)
         {
-            if (zaposlenikIzmjena != null)
-            {
-                textBoxImeZaposlenik.Text = zaposlenikIzmjena.Ime;
-                textBoxPrezimeZaposlenik.Text = zaposlenikIzmjena.Prezime;
-                groupBoxSpol.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Text == zaposlenikIzmjena.Spol).Checked=true;
-                textBoxEmailZaposlenik.Text = zaposlenikIzmjena.Email;
-                textBoxBrMobZaposlenik.Text = zaposlenikIzmjena.Broj_mobitela;
-                textBoxOibZaposlenik.Text = zaposlenikIzmjena.OIB;
-                dateTimePickerZaposlenje.Value = zaposlenikIzmjena.Datum_zaposlenja;
-            }
+
+            textBoxImeZaposlenik.Text = zaposlenikIzmjena.Ime;
+            textBoxPrezimeZaposlenik.Text = zaposlenikIzmjena.Prezime;
+            groupBoxSpol.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Text == zaposlenikIzmjena.Spol).Checked=true;
+            textBoxEmailZaposlenik.Text = zaposlenikIzmjena.Email;
+            textBoxBrMobZaposlenik.Text = zaposlenikIzmjena.Broj_mobitela;
+            textBoxOibZaposlenik.Text = zaposlenikIzmjena.OIB;
+            dateTimePickerZaposlenje.Value = zaposlenikIzmjena.Datum_zaposlenja;
+
 
         }
 

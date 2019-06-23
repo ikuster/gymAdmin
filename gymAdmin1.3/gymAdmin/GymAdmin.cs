@@ -205,15 +205,9 @@ namespace gymAdmin
 
         private void buttonUrediZaposlenika_Click(object sender, EventArgs e)
         {
-            if (dgvZaposlenici.CurrentRow != null)
-            {
-                Zaposlenik selektiraniZaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Zaposlenik;
-                if (selektiraniZaposlenik != null)
-                {
-                    IzmjenaZaposlenika formaIzmjenaZaposlenika = new IzmjenaZaposlenika(selektiraniZaposlenik);
-                    formaIzmjenaZaposlenika.ShowDialog();
-                }
-            }
+             Zaposlenik selektiraniZaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Zaposlenik;
+             IzmjenaZaposlenika formaIzmjenaZaposlenika = new IzmjenaZaposlenika(selektiraniZaposlenik);
+             formaIzmjenaZaposlenika.ShowDialog();
         }
 
         private void buttonDodajZaposlenika_Click(object sender, EventArgs e)
