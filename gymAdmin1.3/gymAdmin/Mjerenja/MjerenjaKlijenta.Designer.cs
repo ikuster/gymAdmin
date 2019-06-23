@@ -1,6 +1,6 @@
 ﻿namespace gymAdmin
 {
-    partial class Mjerenja
+    partial class MjerenjaKlijenta
     {
         /// <summary>
         /// Required designer variable.

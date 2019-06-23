@@ -272,7 +272,6 @@ C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.AzurirajKlijent.resources
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.GymAdmin.resources
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.Login.resources
-C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.Mjerenja.resources
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.NoviClan.resources
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.IzmjenaZaposlenika.resources
 C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.NoviZaposlenik.resources
@@ -332,3 +331,4 @@ C:\Users\Filip\Desktop\gymAdminFinal\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAd
 C:\Users\Filip\Desktop\gymAdminFinal\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.csproj.CopyComplete
 C:\Users\Filip\Desktop\gymAdminFinal\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.exe
 C:\Users\Filip\Desktop\gymAdminFinal\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.pdb
+C:\Users\Ruthen\Documents\GitHub\r19037\gymAdmin1.3\gymAdmin\obj\Debug\gymAdmin.MjerenjaKlijenta.resources

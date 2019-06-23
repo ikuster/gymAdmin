@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace gymAdmin
 {
-    public partial class Mjerenja : Form
+    public partial class MjerenjaKlijenta : Form
     {
         public Klijent MojKlijent { get; set; }
-        public MjerenjaRepozitorij MjerenjaRepozitorij = new MjerenjaRepozitorij();
+        public MjerenjaRepozitorij Mjerenja = new MjerenjaRepozitorij();
         public string[] GrafOpcije = { "Visina", "Težina", "Postotak masnoće" };
 
-        public Mjerenja()
+        public MjerenjaKlijenta()
         {
             InitializeComponent();
             this.Icon = Properties.Resources.sport;
@@ -30,7 +30,7 @@ namespace gymAdmin
         }
         public void OsvjeziMjerenja()
         {
-            dgvMjerenja.DataSource = MjerenjaRepozitorij.DohvatiMjerenja(MojKlijent);
+            dgvMjerenja.DataSource = Mjerenja.DohvatiMjerenja(MojKlijent);
             dgvMjerenja.Columns[0].Visible = false;
             dgvMjerenja.Columns[4].Visible = false;
             dgvMjerenja.Columns[6].Visible = false;
@@ -52,7 +52,7 @@ namespace gymAdmin
         {
             var masnocaGraf = new Series("Postotak masnoće");
 
-            List<Mjerenje> mjerenja = MjerenjaRepozitorij.DohvatiMjerenja(MojKlijent);
+            List<Mjerenje> mjerenja = Mjerenja.DohvatiMjerenja(MojKlijent);
 
             double[] postotciMasnoce = new double[mjerenja.Count];
             int[] dani = new int[mjerenja.Count];
@@ -68,7 +68,7 @@ namespace gymAdmin
             OsvjeziMjerenja();
             var tezineGraf = new Series("Težina");
 
-            List<Mjerenje> mjerenja = MjerenjaRepozitorij.DohvatiMjerenja(MojKlijent);
+            List<Mjerenje> mjerenja = Mjerenja.DohvatiMjerenja(MojKlijent);
 
             double[] tezine = new double[mjerenja.Count];
             int[] dani = new int[mjerenja.Count];
@@ -84,7 +84,7 @@ namespace gymAdmin
             OsvjeziMjerenja();
             var visineGraf = new Series("Visina");
 
-            List<Mjerenje> mjerenja = MjerenjaRepozitorij.DohvatiMjerenja(MojKlijent);
+            List<Mjerenje> mjerenja = Mjerenja.DohvatiMjerenja(MojKlijent);
 
             double[] visine = new double[mjerenja.Count];
             int[] dani = new int[mjerenja.Count];
@@ -117,7 +117,7 @@ namespace gymAdmin
 
         private void BtnDodajMjerenja_Click(object sender, EventArgs e)
         {
-            MjerenjaRepozitorij.DodajMjerenje(StvoriMjerenje());
+            Mjerenja.DodajMjerenje(StvoriMjerenje());
             OcistiFormu();
             OsvjeziMjerenja();
             OsvjeziGrafove();
@@ -125,7 +125,7 @@ namespace gymAdmin
 
         private void BtnObrisiMjerenja_Click(object sender, EventArgs e)
         {
-            MjerenjaRepozitorij.IzbrisiMjerenje(getMjerenje());
+            Mjerenja.IzbrisiMjerenje(getMjerenje());
             OsvjeziMjerenja();
             OsvjeziGrafove();
         }
