@@ -16,6 +16,7 @@ namespace gymAdmin
         public NoviClan()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
 
         private void BtnOdustaniNoviClan_Click(object sender, EventArgs e)

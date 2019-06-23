@@ -15,6 +15,7 @@ namespace gymAdmin
         public PotvrdaBrisanja()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
 
         private void BtnNePotvrdaBrisanja_Click(object sender, EventArgs e)

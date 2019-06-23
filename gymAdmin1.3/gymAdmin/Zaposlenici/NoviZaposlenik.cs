@@ -18,6 +18,7 @@ namespace gymAdmin
         public NoviZaposlenik()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
 
         private void buttonDodajZaposlenika2_Click(object sender, EventArgs e)

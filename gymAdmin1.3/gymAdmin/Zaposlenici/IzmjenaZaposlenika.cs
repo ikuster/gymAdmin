@@ -19,6 +19,7 @@ namespace gymAdmin
         {
             zaposlenikIzmjena = odabraniZaposlenik;
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
 
         private void IzmjenaZaposlenika_Load(object sender, EventArgs e)

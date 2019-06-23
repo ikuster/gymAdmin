@@ -21,6 +21,7 @@ namespace gymAdmin
         {
             korIme = korisnickoIme;
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
         
 

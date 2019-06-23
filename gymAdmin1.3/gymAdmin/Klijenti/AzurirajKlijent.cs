@@ -18,6 +18,7 @@ namespace gymAdmin
         {
             InitializeComponent();
             IzabraniKlijent = izabraniKlijent;
+            this.Icon = Properties.Resources.sport;
         }
 
         private void BtnOdustaniDetaljiKlijent_Click(object sender, EventArgs e)

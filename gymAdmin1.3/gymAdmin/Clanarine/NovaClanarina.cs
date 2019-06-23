@@ -19,7 +19,8 @@ namespace gymAdmin
         public NovaClanarina()
         {
             InitializeComponent();
-            
+            this.Icon = Properties.Resources.sport;
+
         }
 
         private Clanarina StvoriClanarinu()

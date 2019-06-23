@@ -16,6 +16,7 @@ namespace gymAdmin
         public Login()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
 
         private void button1_Click(object sender, EventArgs e)

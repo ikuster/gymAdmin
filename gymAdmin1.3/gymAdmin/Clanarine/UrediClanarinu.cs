@@ -19,6 +19,7 @@ namespace gymAdmin
         public UrediClanarinu()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
 
         private void BtnDodajUrediClanarinu_Click(object sender, EventArgs e)

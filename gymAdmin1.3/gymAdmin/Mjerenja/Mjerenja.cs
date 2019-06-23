@@ -20,12 +20,13 @@ namespace gymAdmin
         public Mjerenja()
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.sport;
         }
         public void OsvjeziGrafove()
         {
             UcitajGrafMasnoca(chartMasnoce);
             UcitajGrafTezina(chartTezina);
-            UcitajGrafTezina(chartVisina);
+            UcitajGrafVisina(chartVisina);
         }
         public void OsvjeziMjerenja()
         {
