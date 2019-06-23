@@ -53,16 +53,16 @@
             this.PanelNovaClanarina.Controls.Add(this.BtnOdustaniNovaClanarina);
             this.PanelNovaClanarina.Controls.Add(this.BtnDodajNovaClanarina);
             this.PanelNovaClanarina.Controls.Add(this.TxtOpisNovaClanarina);
-            this.PanelNovaClanarina.Controls.Add(this.TxtCijenaNovaClanarina);
-            this.PanelNovaClanarina.Controls.Add(this.TxtTrajanjeNovaClanarina);
-            this.PanelNovaClanarina.Controls.Add(this.TxtNazivNovaClanarina);
             this.PanelNovaClanarina.Controls.Add(this.LabelOpisNovaClanarina);
             this.PanelNovaClanarina.Controls.Add(this.LabelCijenaNovaClanarina);
             this.PanelNovaClanarina.Controls.Add(this.LabelTrajanjeNovaClanarina);
             this.PanelNovaClanarina.Controls.Add(this.LabelNazivNovaClanarina);
-            this.PanelNovaClanarina.Controls.Add(this.LabelValidation1);
-            this.PanelNovaClanarina.Controls.Add(this.LabelValidation2);
+            this.PanelNovaClanarina.Controls.Add(this.TxtNazivNovaClanarina);
             this.PanelNovaClanarina.Controls.Add(this.LabelValidation0);
+            this.PanelNovaClanarina.Controls.Add(this.TxtTrajanjeNovaClanarina);
+            this.PanelNovaClanarina.Controls.Add(this.LabelValidation1);
+            this.PanelNovaClanarina.Controls.Add(this.TxtCijenaNovaClanarina);
+            this.PanelNovaClanarina.Controls.Add(this.LabelValidation2);
             this.PanelNovaClanarina.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelNovaClanarina.Location = new System.Drawing.Point(-1, 0);
             this.PanelNovaClanarina.Margin = new System.Windows.Forms.Padding(0);
@@ -185,33 +185,33 @@
             // LabelValidation1
             // 
             this.LabelValidation1.AutoSize = true;
-            this.LabelValidation1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelValidation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelValidation1.ForeColor = System.Drawing.Color.DarkRed;
-            this.LabelValidation1.Location = new System.Drawing.Point(93, 57);
+            this.LabelValidation1.Location = new System.Drawing.Point(97, 59);
             this.LabelValidation1.Name = "LabelValidation1";
-            this.LabelValidation1.Size = new System.Drawing.Size(179, 30);
+            this.LabelValidation1.Size = new System.Drawing.Size(171, 25);
             this.LabelValidation1.TabIndex = 27;
             this.LabelValidation1.Text = "validation_lab.l._...";
             // 
             // LabelValidation2
             // 
             this.LabelValidation2.AutoSize = true;
-            this.LabelValidation2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelValidation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelValidation2.ForeColor = System.Drawing.Color.DarkRed;
-            this.LabelValidation2.Location = new System.Drawing.Point(93, 102);
+            this.LabelValidation2.Location = new System.Drawing.Point(97, 104);
             this.LabelValidation2.Name = "LabelValidation2";
-            this.LabelValidation2.Size = new System.Drawing.Size(179, 30);
+            this.LabelValidation2.Size = new System.Drawing.Size(171, 25);
             this.LabelValidation2.TabIndex = 29;
             this.LabelValidation2.Text = "validation_lab.l._...";
             // 
             // LabelValidation0
             // 
             this.LabelValidation0.AutoSize = true;
-            this.LabelValidation0.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelValidation0.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelValidation0.ForeColor = System.Drawing.Color.DarkRed;
-            this.LabelValidation0.Location = new System.Drawing.Point(93, 19);
+            this.LabelValidation0.Location = new System.Drawing.Point(97, 21);
             this.LabelValidation0.Name = "LabelValidation0";
-            this.LabelValidation0.Size = new System.Drawing.Size(179, 30);
+            this.LabelValidation0.Size = new System.Drawing.Size(171, 25);
             this.LabelValidation0.TabIndex = 28;
             this.LabelValidation0.Text = "validation_lab.l._...";
             // 

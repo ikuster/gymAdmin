@@ -94,7 +94,7 @@
             this.BtnDodajUrediClanarinu.Name = "BtnDodajUrediClanarinu";
             this.BtnDodajUrediClanarinu.Size = new System.Drawing.Size(124, 29);
             this.BtnDodajUrediClanarinu.TabIndex = 25;
-            this.BtnDodajUrediClanarinu.Text = "Dodaj";
+            this.BtnDodajUrediClanarinu.Text = "Spremi";
             this.BtnDodajUrediClanarinu.UseVisualStyleBackColor = false;
             this.BtnDodajUrediClanarinu.Click += new System.EventHandler(this.BtnDodajUrediClanarinu_Click);
             // 

@@ -38,6 +38,7 @@
             // buttonPrijava
             // 
             this.buttonPrijava.BackColor = System.Drawing.SystemColors.MenuText;
+            this.buttonPrijava.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPrijava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrijava.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrijava.ForeColor = System.Drawing.SystemColors.ControlLightLight;

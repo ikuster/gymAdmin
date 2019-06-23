@@ -134,6 +134,7 @@ namespace gymAdmin
         private void OsvjeziClanarine()
         {
             dgvClanarine.DataSource = Clanarine.DohvatiClanarine();
+            dgvClanarine.Columns[0].Visible = false;
         }
 
         private void BtnOsvjeziClanarine_Click(object sender, EventArgs e)
@@ -152,6 +153,7 @@ namespace gymAdmin
             UrediClanarinu formaUrediClanarinu = new UrediClanarinu();
             formaUrediClanarinu.MojaClanarina = getClanarina();
             formaUrediClanarinu.ShowDialog();
+
         }
 
         private void BtnDodajClanarinu_Click(object sender, EventArgs e)
