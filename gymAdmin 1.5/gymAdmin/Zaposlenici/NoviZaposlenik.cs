@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 
 namespace gymAdmin
 {
@@ -108,6 +109,13 @@ namespace gymAdmin
             {
                 e.Cancel = true;
             }
+        }
+
+        private void NoviZaposlenik_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = string.Format("{0}Resources\\helpDodavanjeZaposlenika.html", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            Help.ShowHelp(this, FileName);
         }
     }
 }

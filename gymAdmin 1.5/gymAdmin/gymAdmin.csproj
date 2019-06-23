@@ -239,6 +239,9 @@
     <Content Include="Resources\helpNovaClanarina.html" />
     <Content Include="Resources\helpNoviKlijent.html" />
     <Content Include="Resources\helpUrediClanarinu.html" />
+    <Content Include="Resources\helpAzuriranjeZaposlenika.html" />
+    <Content Include="Resources\helpDodavanjeZaposlenika.html" />
+    <Content Include="Resources\helpZaposlenici.html" />
     <None Include="Resources\sport.ico" />
   </ItemGroup>
   <ItemGroup />

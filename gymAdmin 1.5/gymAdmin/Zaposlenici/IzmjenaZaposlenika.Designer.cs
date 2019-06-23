@@ -241,6 +241,7 @@
             this.Name = "IzmjenaZaposlenika";
             this.Text = "Uredi zaposlenika";
             this.Load += new System.EventHandler(this.IzmjenaZaposlenika_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.IzmjenaZaposlenika_HelpRequested);
             this.groupBoxSpol.ResumeLayout(false);
             this.groupBoxSpol.PerformLayout();
             this.ResumeLayout(false);

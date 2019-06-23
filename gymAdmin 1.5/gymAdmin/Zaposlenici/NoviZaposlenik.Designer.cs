@@ -239,6 +239,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NoviZaposlenik";
             this.Text = "NoviZaposlenik";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NoviZaposlenik_HelpRequested);
             this.groupBoxSpol.ResumeLayout(false);
             this.groupBoxSpol.PerformLayout();
             this.ResumeLayout(false);

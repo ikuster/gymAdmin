@@ -250,5 +250,12 @@ namespace gymAdmin
         {
 
         }
+
+        private void PanelZaposlenici_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = string.Format("{0}Resources\\helpZaposlenici.html", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            Help.ShowHelp(this, FileName);
+        }
     }
 }

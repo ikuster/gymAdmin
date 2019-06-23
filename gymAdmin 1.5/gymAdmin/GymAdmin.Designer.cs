@@ -66,9 +66,9 @@
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
             this.PanelPocetna = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.LabelPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.LabelPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
@@ -513,6 +513,7 @@
             this.PanelZaposlenici.Name = "PanelZaposlenici";
             this.PanelZaposlenici.Size = new System.Drawing.Size(801, 461);
             this.PanelZaposlenici.TabIndex = 26;
+            this.PanelZaposlenici.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.PanelZaposlenici_HelpRequested);
             // 
             // BtnOzvjeziZaposlenici
             // 
@@ -655,6 +656,18 @@
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // LabelPrijavljeniKorisnik
+            // 
+            this.LabelPrijavljeniKorisnik.AutoSize = true;
+            this.LabelPrijavljeniKorisnik.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrijavljeniKorisnik.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPrijavljeniKorisnik.ForeColor = System.Drawing.Color.Red;
+            this.LabelPrijavljeniKorisnik.Location = new System.Drawing.Point(475, 138);
+            this.LabelPrijavljeniKorisnik.Name = "LabelPrijavljeniKorisnik";
+            this.LabelPrijavljeniKorisnik.Size = new System.Drawing.Size(0, 24);
+            this.LabelPrijavljeniKorisnik.TabIndex = 2;
+            this.LabelPrijavljeniKorisnik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -678,28 +691,16 @@
             this.label5.Text = "Dobrodošli u GymAdmin!";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LabelPrijavljeniKorisnik
-            // 
-            this.LabelPrijavljeniKorisnik.AutoSize = true;
-            this.LabelPrijavljeniKorisnik.BackColor = System.Drawing.Color.Transparent;
-            this.LabelPrijavljeniKorisnik.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPrijavljeniKorisnik.ForeColor = System.Drawing.Color.Red;
-            this.LabelPrijavljeniKorisnik.Location = new System.Drawing.Point(475, 138);
-            this.LabelPrijavljeniKorisnik.Name = "LabelPrijavljeniKorisnik";
-            this.LabelPrijavljeniKorisnik.Size = new System.Drawing.Size(0, 24);
-            this.LabelPrijavljeniKorisnik.TabIndex = 2;
-            this.LabelPrijavljeniKorisnik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // GymAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.PanelMenu);
-            this.Controls.Add(this.PanelPocetna);
             this.Controls.Add(this.PanelZaposlenici);
             this.Controls.Add(this.PanelClanarine);
             this.Controls.Add(this.PanelKlijenti);
+            this.Controls.Add(this.PanelPocetna);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

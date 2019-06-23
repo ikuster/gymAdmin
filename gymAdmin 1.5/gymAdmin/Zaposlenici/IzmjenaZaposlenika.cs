@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace gymAdmin
 {
@@ -110,5 +111,11 @@ namespace gymAdmin
             }
         }
 
+        private void IzmjenaZaposlenika_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = string.Format("{0}Resources\\helpAzuriranjeZaposlenika.html", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            Help.ShowHelp(this, FileName);
+        }
     }
 }
