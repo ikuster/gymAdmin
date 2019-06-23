@@ -21,7 +21,12 @@ namespace gymAdmin
         {
             InitializeComponent();
         }
-
+        public void OsvjeziGrafove()
+        {
+            UcitajGrafMasnoca(chartMasnoce);
+            UcitajGrafTezina(chartTezina);
+            UcitajGrafTezina(chartVisina);
+        }
         public void OsvjeziMjerenja()
         {
             dgvMjerenja.DataSource = MjerenjaRepozitorij.DohvatiMjerenja(MojKlijent);
@@ -92,13 +97,7 @@ namespace gymAdmin
         private void Mjerenja_Load(object sender, EventArgs e)
         {
             OsvjeziMjerenja();
-            UcitajGrafMasnoca(chart1);
-            UcitajGrafTezina(chart2);
-            CboxMjerenjaTop.DataSource = GrafOpcije;
-            CboxMjerenjaTop.SelectedItem = "Postotak masnoće";
-            CboxMjerenjaBottom.BindingContext = new BindingContext();
-            CboxMjerenjaBottom.DataSource = GrafOpcije;
-            CboxMjerenjaBottom.SelectedItem = "Težina";
+            OsvjeziGrafove();
         }
 
         private Mjerenje StvoriMjerenje()
@@ -112,9 +111,7 @@ namespace gymAdmin
                 Mast = double.Parse(TxtPostotakMastiDodajMjerenje.Text),
                 Id_Klijent = MojKlijent.Id_Klijent
             };
-
             return mjerenje;
-        
         }
 
         private void BtnDodajMjerenja_Click(object sender, EventArgs e)
@@ -122,49 +119,15 @@ namespace gymAdmin
             MjerenjaRepozitorij.DodajMjerenje(StvoriMjerenje());
             OcistiFormu();
             OsvjeziMjerenja();
+            OsvjeziGrafove();
         }
 
         private void BtnObrisiMjerenja_Click(object sender, EventArgs e)
         {
             MjerenjaRepozitorij.IzbrisiMjerenje(getMjerenje());
             OsvjeziMjerenja();
+            OsvjeziGrafove();
         }
-
-        private void CboxMjerenjaTop_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string izabranaOpcija = CboxMjerenjaTop.SelectedItem.ToString();
-            switch (izabranaOpcija)
-            {
-                case "Visina":
-                    UcitajGrafVisina(chart1);
-                    break;
-                case "Težina":
-                    UcitajGrafTezina(chart1);
-                    break;
-                case "Postotak masnoće":
-                    UcitajGrafMasnoca(chart1);
-                    break;
-            }
-        }
-
-        private void CboxMjerenjaBottom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string izabranaOpcija = CboxMjerenjaBottom.SelectedItem.ToString();
-            switch (izabranaOpcija)
-            {
-                case "Visina":
-                    UcitajGrafVisina(chart2);
-                    break;
-                case "Težina":
-                    UcitajGrafTezina(chart2);
-                    break;
-                case "Postotak masnoće":
-                    UcitajGrafMasnoca(chart2);
-                    break;
-            }
-        }
-
-
     }
     
 }

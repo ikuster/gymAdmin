@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.TPanelMjerenja = new System.Windows.Forms.TableLayoutPanel();
             this.PanelListaMjerenja = new System.Windows.Forms.Panel();
             this.BtnDodajMjerenja = new System.Windows.Forms.Button();
@@ -48,21 +51,22 @@
             this.dgvMjerenja = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.CboxMjerenjaTop = new System.Windows.Forms.ComboBox();
+            this.chartVisina = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartMasnoce = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label6 = new System.Windows.Forms.Label();
-            this.CboxMjerenjaBottom = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.chartTezina = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.TPanelMjerenja.SuspendLayout();
             this.PanelListaMjerenja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMjerenja)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVisina)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMasnoce)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTezina)).BeginInit();
             this.SuspendLayout();
             // 
             // TPanelMjerenja
@@ -80,7 +84,7 @@
             this.TPanelMjerenja.Name = "TPanelMjerenja";
             this.TPanelMjerenja.RowCount = 1;
             this.TPanelMjerenja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TPanelMjerenja.Size = new System.Drawing.Size(942, 541);
+            this.TPanelMjerenja.Size = new System.Drawing.Size(954, 564);
             this.TPanelMjerenja.TabIndex = 0;
             // 
             // PanelListaMjerenja
@@ -100,7 +104,7 @@
             this.PanelListaMjerenja.Location = new System.Drawing.Point(0, 0);
             this.PanelListaMjerenja.Margin = new System.Windows.Forms.Padding(0);
             this.PanelListaMjerenja.Name = "PanelListaMjerenja";
-            this.PanelListaMjerenja.Size = new System.Drawing.Size(282, 541);
+            this.PanelListaMjerenja.Size = new System.Drawing.Size(286, 564);
             this.PanelListaMjerenja.TabIndex = 0;
             // 
             // BtnDodajMjerenja
@@ -111,7 +115,7 @@
             this.BtnDodajMjerenja.FlatAppearance.BorderSize = 0;
             this.BtnDodajMjerenja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDodajMjerenja.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDodajMjerenja.Location = new System.Drawing.Point(148, 490);
+            this.BtnDodajMjerenja.Location = new System.Drawing.Point(152, 513);
             this.BtnDodajMjerenja.Margin = new System.Windows.Forms.Padding(0);
             this.BtnDodajMjerenja.Name = "BtnDodajMjerenja";
             this.BtnDodajMjerenja.Size = new System.Drawing.Size(117, 29);
@@ -128,7 +132,7 @@
             this.BtnObrisiMjerenja.FlatAppearance.BorderSize = 0;
             this.BtnObrisiMjerenja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnObrisiMjerenja.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnObrisiMjerenja.Location = new System.Drawing.Point(10, 490);
+            this.BtnObrisiMjerenja.Location = new System.Drawing.Point(14, 513);
             this.BtnObrisiMjerenja.Margin = new System.Windows.Forms.Padding(0);
             this.BtnObrisiMjerenja.Name = "BtnObrisiMjerenja";
             this.BtnObrisiMjerenja.Size = new System.Drawing.Size(117, 29);
@@ -208,7 +212,7 @@
             this.dgvMjerenja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMjerenja.Location = new System.Drawing.Point(11, 33);
             this.dgvMjerenja.Name = "dgvMjerenja";
-            this.dgvMjerenja.Size = new System.Drawing.Size(254, 291);
+            this.dgvMjerenja.Size = new System.Drawing.Size(258, 291);
             this.dgvMjerenja.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -220,53 +224,44 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(282, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(286, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.90758F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.09242F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(660, 541);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(668, 564);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.chart1);
-            this.panel1.Controls.Add(this.CboxMjerenjaTop);
+            this.panel1.Controls.Add(this.chartTezina);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.chartVisina);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(660, 270);
+            this.panel1.Size = new System.Drawing.Size(668, 281);
             this.panel1.TabIndex = 0;
             // 
-            // chart1
+            // chartVisina
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(14, 39);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(635, 214);
-            this.chart1.TabIndex = 29;
-            this.chart1.Text = "chart1";
-            // 
-            // CboxMjerenjaTop
-            // 
-            this.CboxMjerenjaTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboxMjerenjaTop.FormattingEnabled = true;
-            this.CboxMjerenjaTop.Location = new System.Drawing.Point(75, 5);
-            this.CboxMjerenjaTop.Name = "CboxMjerenjaTop";
-            this.CboxMjerenjaTop.Size = new System.Drawing.Size(228, 28);
-            this.CboxMjerenjaTop.TabIndex = 28;
-            this.CboxMjerenjaTop.SelectedIndexChanged += new System.EventHandler(this.CboxMjerenjaTop_SelectedIndexChanged);
+            chartArea2.Name = "ChartArea1";
+            this.chartVisina.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartVisina.Legends.Add(legend2);
+            this.chartVisina.Location = new System.Drawing.Point(14, 54);
+            this.chartVisina.Name = "chartVisina";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartVisina.Series.Add(series2);
+            this.chartVisina.Size = new System.Drawing.Size(311, 227);
+            this.chartVisina.TabIndex = 29;
+            this.chartVisina.Text = "chartVisina";
             // 
             // label5
             // 
@@ -274,9 +269,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(10, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(52, 20);
             this.label5.TabIndex = 27;
-            this.label5.Text = "Prikaži:";
+            this.label5.Text = "Visina";
             // 
             // panel3
             // 
@@ -284,30 +279,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.chart2);
+            this.panel3.Controls.Add(this.chartMasnoce);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.CboxMjerenjaBottom);
-            this.panel3.Location = new System.Drawing.Point(0, 270);
+            this.panel3.Location = new System.Drawing.Point(0, 281);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(660, 271);
+            this.panel3.Size = new System.Drawing.Size(668, 283);
             this.panel3.TabIndex = 1;
             // 
-            // chart2
+            // chartMasnoce
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
-            this.chart2.Location = new System.Drawing.Point(16, 65);
-            this.chart2.Name = "chart2";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(633, 185);
-            this.chart2.TabIndex = 31;
-            this.chart2.Text = "chart2";
+            chartArea3.Name = "ChartArea1";
+            this.chartMasnoce.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartMasnoce.Legends.Add(legend3);
+            this.chartMasnoce.Location = new System.Drawing.Point(16, 65);
+            this.chartMasnoce.Name = "chartMasnoce";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartMasnoce.Series.Add(series3);
+            this.chartMasnoce.Size = new System.Drawing.Size(633, 185);
+            this.chartMasnoce.TabIndex = 31;
+            this.chartMasnoce.Text = "chartMasnoce";
             // 
             // label6
             // 
@@ -315,26 +309,42 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
+            this.label6.Size = new System.Drawing.Size(141, 20);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Prikaži:";
+            this.label6.Text = "Postotak masnoće";
             // 
-            // CboxMjerenjaBottom
+            // label7
             // 
-            this.CboxMjerenjaBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboxMjerenjaBottom.FormattingEnabled = true;
-            this.CboxMjerenjaBottom.Location = new System.Drawing.Point(75, 10);
-            this.CboxMjerenjaBottom.Name = "CboxMjerenjaBottom";
-            this.CboxMjerenjaBottom.Size = new System.Drawing.Size(228, 28);
-            this.CboxMjerenjaBottom.TabIndex = 30;
-            this.CboxMjerenjaBottom.SelectedIndexChanged += new System.EventHandler(this.CboxMjerenjaBottom_SelectedIndexChanged);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(358, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 20);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Težina";
+            // 
+            // chartTezina
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartTezina.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTezina.Legends.Add(legend1);
+            this.chartTezina.Location = new System.Drawing.Point(345, 51);
+            this.chartTezina.Name = "chartTezina";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartTezina.Series.Add(series1);
+            this.chartTezina.Size = new System.Drawing.Size(304, 227);
+            this.chartTezina.TabIndex = 31;
+            this.chartTezina.Text = "chartTezina";
             // 
             // Mjerenja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(942, 541);
+            this.ClientSize = new System.Drawing.Size(954, 564);
             this.Controls.Add(this.TPanelMjerenja);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -351,10 +361,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVisina)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMasnoce)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTezina)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,12 +386,12 @@
         private System.Windows.Forms.Button BtnObrisiMjerenja;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox CboxMjerenjaTop;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox CboxMjerenjaBottom;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartVisina;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartMasnoce;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTezina;
+        private System.Windows.Forms.Label label7;
     }
 }
