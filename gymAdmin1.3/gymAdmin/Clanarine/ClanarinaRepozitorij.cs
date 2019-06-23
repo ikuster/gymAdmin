@@ -99,6 +99,10 @@ namespace gymAdmin
             {
                 return true;
             }
+            else if(trajanje == "")
+            {
+                return false;
+            }
             else
             {
                 return false;
@@ -110,6 +114,10 @@ namespace gymAdmin
             if (float.TryParse(cijena, out float c))
             {
                 return true;
+            }
+            else if(cijena == "")
+            {
+                return false;
             }
             else
             {
