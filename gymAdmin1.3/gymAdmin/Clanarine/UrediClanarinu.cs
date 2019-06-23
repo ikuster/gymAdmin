@@ -15,6 +15,7 @@ namespace gymAdmin
 
         public Clanarina MojaClanarina { get; set; }
         ClanarinaRepozitorij Repozitorij = new ClanarinaRepozitorij();
+        bool ispravniPodaci = false;
 
         public UrediClanarinu()
         {
@@ -24,16 +25,25 @@ namespace gymAdmin
 
         private void BtnDodajUrediClanarinu_Click(object sender, EventArgs e)
         {
-            Clanarina c = new Clanarina
-            {
-                Naziv = TxtNazivUrediClanarinu.Text.ToString(),
-                Trajanje = int.Parse(TxtTrajanjeUrediClanarinu.Text),
-                Cijena = float.Parse(TxtCijenaUrediClanarinu.Text),
-                Opis = TxtOpisUrediClanarinu.Text.ToString()
-            };
 
-            Repozitorij.UrediClanarinu(MojaClanarina, c);
-            this.Close();
+            if (ispravniPodaci && TxtNazivUrediClanarinu.Text != "")
+            {
+                Clanarina c = new Clanarina
+                {
+                    Naziv = TxtNazivUrediClanarinu.Text.ToString(),
+                    Trajanje = int.Parse(TxtTrajanjeUrediClanarinu.Text),
+                    Cijena = float.Parse(TxtCijenaUrediClanarinu.Text),
+                    Opis = TxtOpisUrediClanarinu.Text.ToString()
+                };
+
+                Repozitorij.UrediClanarinu(MojaClanarina, c);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Podaci nisu u ispravnom formatu!");
+            }
+            
         }
 
         private void BtnOdustaniUrediClanarinu_Click(object sender, EventArgs e)
