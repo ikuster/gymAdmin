@@ -70,6 +70,7 @@
             this.LabelPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.helpProviderKlijenti = new System.Windows.Forms.HelpProvider();
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
@@ -228,6 +229,7 @@
             this.PanelKlijenti.Location = new System.Drawing.Point(184, 0);
             this.PanelKlijenti.Margin = new System.Windows.Forms.Padding(0);
             this.PanelKlijenti.Name = "PanelKlijenti";
+            this.helpProviderKlijenti.SetShowHelp(this.PanelKlijenti, true);
             this.PanelKlijenti.Size = new System.Drawing.Size(800, 461);
             this.PanelKlijenti.TabIndex = 23;
             // 
@@ -700,16 +702,21 @@
             this.label5.Text = "Dobrodošli u GymAdmin!";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // helpProviderKlijenti
+            // 
+            this.helpProviderKlijenti.HelpNamespace = "C:\\Users\\Filip\\Desktop\\nadamsezadnja\\r19037\\gymAdmin1.3\\gymAdmin\\Klijenti\\helpKli" +
+    "jenti.html";
+            // 
             // GymAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.PanelKlijenti);
+            this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelPocetna);
             this.Controls.Add(this.PanelZaposlenici);
             this.Controls.Add(this.PanelClanarine);
-            this.Controls.Add(this.PanelKlijenti);
-            this.Controls.Add(this.PanelMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -776,6 +783,7 @@
         private System.Windows.Forms.LinkLabel LabelLinkPomoc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnOdjava;
+        private System.Windows.Forms.HelpProvider helpProviderKlijenti;
     }
 }
 

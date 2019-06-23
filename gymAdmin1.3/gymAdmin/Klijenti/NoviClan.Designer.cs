@@ -48,6 +48,7 @@
             this.TboxPrezimeNoviClan = new System.Windows.Forms.TextBox();
             this.TboxImeNoviClan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpProviderNoviKlijent = new System.Windows.Forms.HelpProvider();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
+            this.helpProviderNoviKlijent.SetShowHelp(this.panel1, true);
             this.panel1.Size = new System.Drawing.Size(333, 340);
             this.panel1.TabIndex = 0;
             // 
@@ -283,6 +285,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ime:";
             // 
+            // helpProviderNoviKlijent
+            // 
+            this.helpProviderNoviKlijent.HelpNamespace = "C:\\Users\\Filip\\Desktop\\nadamsezadnja\\r19037\\gymAdmin1.3\\gymAdmin\\Klijenti\\helpDod" +
+    "avanje.html";
+            // 
             // NoviClan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -325,5 +332,6 @@
         private System.Windows.Forms.TextBox TboxTelefonNoviClan;
         private System.Windows.Forms.Button BtnOdustaniNoviClan;
         private System.Windows.Forms.Button BtnDodajNoviClan;
+        private System.Windows.Forms.HelpProvider helpProviderNoviKlijent;
     }
 }

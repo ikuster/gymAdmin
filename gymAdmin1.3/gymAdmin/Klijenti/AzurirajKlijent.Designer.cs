@@ -48,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpProviderAzurirajKlijent = new System.Windows.Forms.HelpProvider();
             this.PanelDetaljiKlijentStatic.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             this.PanelDetaljiKlijentStatic.Location = new System.Drawing.Point(1, 1);
             this.PanelDetaljiKlijentStatic.Margin = new System.Windows.Forms.Padding(0);
             this.PanelDetaljiKlijentStatic.Name = "PanelDetaljiKlijentStatic";
+            this.helpProviderAzurirajKlijent.SetShowHelp(this.PanelDetaljiKlijentStatic, true);
             this.PanelDetaljiKlijentStatic.Size = new System.Drawing.Size(333, 358);
             this.PanelDetaljiKlijentStatic.TabIndex = 0;
             // 
@@ -285,6 +287,11 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Ime:";
             // 
+            // helpProviderAzurirajKlijent
+            // 
+            this.helpProviderAzurirajKlijent.HelpNamespace = "C:\\Users\\Filip\\Desktop\\nadamsezadnja\\r19037\\gymAdmin1.3\\gymAdmin\\Klijenti\\helpAzu" +
+    "riranje.html";
+            // 
             // AzurirajKlijent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -326,5 +333,6 @@
         private System.Windows.Forms.TextBox textBoxPrezime;
         private System.Windows.Forms.TextBox textBoxIme;
         private System.Windows.Forms.ComboBox comboBoxClanarina;
+        private System.Windows.Forms.HelpProvider helpProviderAzurirajKlijent;
     }
 }
