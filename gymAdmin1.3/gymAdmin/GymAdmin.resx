@@ -294,7 +294,11 @@
         GUQ3B27CgbDumDRpUlMkSU9nfUXn9zu+NLrs/HJoqf8CTSbUcd2ymSwAAAAASUVORK5CYII=
 </value>
   </data>
+<<<<<<< HEAD
   <metadata name="HelpClanarine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+=======
+  <metadata name="helpProviderKlijenti.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+>>>>>>> 1eb52555b14938ec45d2cb4c3f2e02931b10eccd
     <value>17, 17</value>
   </metadata>
 </root>
