@@ -70,11 +70,11 @@
             this.LabelPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.HelpClanarine = new System.Windows.Forms.HelpProvider();
-=======
-            this.helpProviderKlijenti = new System.Windows.Forms.HelpProvider();
->>>>>>> 1eb52555b14938ec45d2cb4c3f2e02931b10eccd
+
+      
+
+          
+
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
@@ -233,7 +233,7 @@
             this.PanelKlijenti.Location = new System.Drawing.Point(184, 0);
             this.PanelKlijenti.Margin = new System.Windows.Forms.Padding(0);
             this.PanelKlijenti.Name = "PanelKlijenti";
-            this.helpProviderKlijenti.SetShowHelp(this.PanelKlijenti, true);
+
             this.PanelKlijenti.Size = new System.Drawing.Size(800, 461);
             this.PanelKlijenti.TabIndex = 23;
             // 
@@ -706,17 +706,8 @@
             this.label5.Text = "Dobrodošli u GymAdmin!";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-<<<<<<< HEAD
-            // HelpClanarine
-            // 
-            this.HelpClanarine.HelpNamespace = "C:\\Users\\Ruthen\\Documents\\GitHub\\r19037\\gymAdmin1.3\\gymAdmin\\Clanarine\\HelpClanar" +
-    "ina.html";
-=======
-            // helpProviderKlijenti
-            // 
-            this.helpProviderKlijenti.HelpNamespace = "C:\\Users\\Filip\\Desktop\\nadamsezadnja\\r19037\\gymAdmin1.3\\gymAdmin\\Klijenti\\helpKli" +
-    "jenti.html";
->>>>>>> 1eb52555b14938ec45d2cb4c3f2e02931b10eccd
+
+
             // 
             // GymAdmin
             // 
@@ -733,7 +724,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "GymAdmin";
-            this.HelpClanarine.SetShowHelp(this, true);
             this.Text = "GymAdmin";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelMenu.ResumeLayout(false);
@@ -795,11 +785,7 @@
         private System.Windows.Forms.LinkLabel LabelLinkPomoc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnOdjava;
-<<<<<<< HEAD
-        private System.Windows.Forms.HelpProvider HelpClanarine;
-=======
-        private System.Windows.Forms.HelpProvider helpProviderKlijenti;
->>>>>>> 1eb52555b14938ec45d2cb4c3f2e02931b10eccd
+
     }
 }
 
