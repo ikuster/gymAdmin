@@ -70,6 +70,7 @@
             this.LabelPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.HelpClanarine = new System.Windows.Forms.HelpProvider();
             this.PanelMenu.SuspendLayout();
             this.PanelKlijenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
@@ -700,6 +701,11 @@
             this.label5.Text = "Dobrodošli u GymAdmin!";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // HelpClanarine
+            // 
+            this.HelpClanarine.HelpNamespace = "C:\\Users\\Ruthen\\Documents\\GitHub\\r19037\\gymAdmin1.3\\gymAdmin\\Clanarine\\HelpClanar" +
+    "ina.html";
+            // 
             // GymAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -715,6 +721,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "GymAdmin";
+            this.HelpClanarine.SetShowHelp(this, true);
             this.Text = "GymAdmin";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelMenu.ResumeLayout(false);
@@ -776,6 +783,7 @@
         private System.Windows.Forms.LinkLabel LabelLinkPomoc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnOdjava;
+        private System.Windows.Forms.HelpProvider HelpClanarine;
     }
 }
 

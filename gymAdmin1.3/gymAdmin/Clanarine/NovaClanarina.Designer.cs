@@ -32,16 +32,17 @@
             this.BtnOdustaniNovaClanarina = new System.Windows.Forms.Button();
             this.BtnDodajNovaClanarina = new System.Windows.Forms.Button();
             this.TxtOpisNovaClanarina = new System.Windows.Forms.TextBox();
-            this.TxtCijenaNovaClanarina = new System.Windows.Forms.TextBox();
-            this.TxtTrajanjeNovaClanarina = new System.Windows.Forms.TextBox();
-            this.TxtNazivNovaClanarina = new System.Windows.Forms.TextBox();
             this.LabelOpisNovaClanarina = new System.Windows.Forms.Label();
             this.LabelCijenaNovaClanarina = new System.Windows.Forms.Label();
             this.LabelTrajanjeNovaClanarina = new System.Windows.Forms.Label();
             this.LabelNazivNovaClanarina = new System.Windows.Forms.Label();
-            this.LabelValidation1 = new System.Windows.Forms.Label();
-            this.LabelValidation2 = new System.Windows.Forms.Label();
+            this.TxtNazivNovaClanarina = new System.Windows.Forms.TextBox();
             this.LabelValidation0 = new System.Windows.Forms.Label();
+            this.TxtTrajanjeNovaClanarina = new System.Windows.Forms.TextBox();
+            this.LabelValidation1 = new System.Windows.Forms.Label();
+            this.TxtCijenaNovaClanarina = new System.Windows.Forms.TextBox();
+            this.LabelValidation2 = new System.Windows.Forms.Label();
+            this.PomocNovaClanarina = new System.Windows.Forms.HelpProvider();
             this.PanelNovaClanarina.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,33 +116,6 @@
             this.TxtOpisNovaClanarina.Size = new System.Drawing.Size(181, 160);
             this.TxtOpisNovaClanarina.TabIndex = 7;
             // 
-            // TxtCijenaNovaClanarina
-            // 
-            this.TxtCijenaNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCijenaNovaClanarina.Location = new System.Drawing.Point(92, 102);
-            this.TxtCijenaNovaClanarina.Name = "TxtCijenaNovaClanarina";
-            this.TxtCijenaNovaClanarina.Size = new System.Drawing.Size(181, 26);
-            this.TxtCijenaNovaClanarina.TabIndex = 6;
-            this.TxtCijenaNovaClanarina.TextChanged += new System.EventHandler(this.TxtCijenaNovaClanarina_TextChanged);
-            // 
-            // TxtTrajanjeNovaClanarina
-            // 
-            this.TxtTrajanjeNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTrajanjeNovaClanarina.Location = new System.Drawing.Point(92, 57);
-            this.TxtTrajanjeNovaClanarina.Name = "TxtTrajanjeNovaClanarina";
-            this.TxtTrajanjeNovaClanarina.Size = new System.Drawing.Size(181, 26);
-            this.TxtTrajanjeNovaClanarina.TabIndex = 5;
-            this.TxtTrajanjeNovaClanarina.TextChanged += new System.EventHandler(this.TxtTrajanjeNovaClanarina_TextChanged);
-            // 
-            // TxtNazivNovaClanarina
-            // 
-            this.TxtNazivNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNazivNovaClanarina.Location = new System.Drawing.Point(92, 19);
-            this.TxtNazivNovaClanarina.Name = "TxtNazivNovaClanarina";
-            this.TxtNazivNovaClanarina.Size = new System.Drawing.Size(181, 26);
-            this.TxtNazivNovaClanarina.TabIndex = 4;
-            this.TxtNazivNovaClanarina.TextChanged += new System.EventHandler(this.TxtNazivNovaClanarina_TextChanged);
-            // 
             // LabelOpisNovaClanarina
             // 
             this.LabelOpisNovaClanarina.AutoSize = true;
@@ -182,27 +156,14 @@
             this.LabelNazivNovaClanarina.TabIndex = 0;
             this.LabelNazivNovaClanarina.Text = "Naziv:";
             // 
-            // LabelValidation1
+            // TxtNazivNovaClanarina
             // 
-            this.LabelValidation1.AutoSize = true;
-            this.LabelValidation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelValidation1.ForeColor = System.Drawing.Color.DarkRed;
-            this.LabelValidation1.Location = new System.Drawing.Point(97, 59);
-            this.LabelValidation1.Name = "LabelValidation1";
-            this.LabelValidation1.Size = new System.Drawing.Size(171, 25);
-            this.LabelValidation1.TabIndex = 27;
-            this.LabelValidation1.Text = "validation_lab.l._...";
-            // 
-            // LabelValidation2
-            // 
-            this.LabelValidation2.AutoSize = true;
-            this.LabelValidation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelValidation2.ForeColor = System.Drawing.Color.DarkRed;
-            this.LabelValidation2.Location = new System.Drawing.Point(97, 104);
-            this.LabelValidation2.Name = "LabelValidation2";
-            this.LabelValidation2.Size = new System.Drawing.Size(171, 25);
-            this.LabelValidation2.TabIndex = 29;
-            this.LabelValidation2.Text = "validation_lab.l._...";
+            this.TxtNazivNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNazivNovaClanarina.Location = new System.Drawing.Point(92, 19);
+            this.TxtNazivNovaClanarina.Name = "TxtNazivNovaClanarina";
+            this.TxtNazivNovaClanarina.Size = new System.Drawing.Size(181, 26);
+            this.TxtNazivNovaClanarina.TabIndex = 4;
+            this.TxtNazivNovaClanarina.TextChanged += new System.EventHandler(this.TxtNazivNovaClanarina_TextChanged);
             // 
             // LabelValidation0
             // 
@@ -215,6 +176,51 @@
             this.LabelValidation0.TabIndex = 28;
             this.LabelValidation0.Text = "validation_lab.l._...";
             // 
+            // TxtTrajanjeNovaClanarina
+            // 
+            this.TxtTrajanjeNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTrajanjeNovaClanarina.Location = new System.Drawing.Point(92, 57);
+            this.TxtTrajanjeNovaClanarina.Name = "TxtTrajanjeNovaClanarina";
+            this.TxtTrajanjeNovaClanarina.Size = new System.Drawing.Size(181, 26);
+            this.TxtTrajanjeNovaClanarina.TabIndex = 5;
+            this.TxtTrajanjeNovaClanarina.TextChanged += new System.EventHandler(this.TxtTrajanjeNovaClanarina_TextChanged);
+            // 
+            // LabelValidation1
+            // 
+            this.LabelValidation1.AutoSize = true;
+            this.LabelValidation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelValidation1.ForeColor = System.Drawing.Color.DarkRed;
+            this.LabelValidation1.Location = new System.Drawing.Point(97, 59);
+            this.LabelValidation1.Name = "LabelValidation1";
+            this.LabelValidation1.Size = new System.Drawing.Size(171, 25);
+            this.LabelValidation1.TabIndex = 27;
+            this.LabelValidation1.Text = "validation_lab.l._...";
+            // 
+            // TxtCijenaNovaClanarina
+            // 
+            this.TxtCijenaNovaClanarina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCijenaNovaClanarina.Location = new System.Drawing.Point(92, 102);
+            this.TxtCijenaNovaClanarina.Name = "TxtCijenaNovaClanarina";
+            this.TxtCijenaNovaClanarina.Size = new System.Drawing.Size(181, 26);
+            this.TxtCijenaNovaClanarina.TabIndex = 6;
+            this.TxtCijenaNovaClanarina.TextChanged += new System.EventHandler(this.TxtCijenaNovaClanarina_TextChanged);
+            // 
+            // LabelValidation2
+            // 
+            this.LabelValidation2.AutoSize = true;
+            this.LabelValidation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelValidation2.ForeColor = System.Drawing.Color.DarkRed;
+            this.LabelValidation2.Location = new System.Drawing.Point(97, 104);
+            this.LabelValidation2.Name = "LabelValidation2";
+            this.LabelValidation2.Size = new System.Drawing.Size(171, 25);
+            this.LabelValidation2.TabIndex = 29;
+            this.LabelValidation2.Text = "validation_lab.l._...";
+            // 
+            // PomocNovaClanarina
+            // 
+            this.PomocNovaClanarina.HelpNamespace = "C:\\Users\\Ruthen\\Documents\\GitHub\\r19037\\gymAdmin1.3\\gymAdmin\\Clanarine\\HelpNovaCl" +
+    "anarina.html";
+            // 
             // NovaClanarina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +230,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "NovaClanarina";
+            this.PomocNovaClanarina.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nova Clanarina";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NovaClanarina_FormClosed);
@@ -250,5 +257,6 @@
         private System.Windows.Forms.Label LabelValidation1;
         private System.Windows.Forms.Label LabelValidation2;
         private System.Windows.Forms.Label LabelValidation0;
+        private System.Windows.Forms.HelpProvider PomocNovaClanarina;
     }
 }

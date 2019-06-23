@@ -39,6 +39,7 @@
             this.LabelCijenaNovaClanarina = new System.Windows.Forms.Label();
             this.LabelTrajanjeNovaClanarina = new System.Windows.Forms.Label();
             this.LabelNazivNovaClanarina = new System.Windows.Forms.Label();
+            this.HelpUrediClanarinu = new System.Windows.Forms.HelpProvider();
             this.PanelNovaClanarina.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,6 +164,11 @@
             this.LabelNazivNovaClanarina.TabIndex = 0;
             this.LabelNazivNovaClanarina.Text = "Naziv:";
             // 
+            // HelpUrediClanarinu
+            // 
+            this.HelpUrediClanarinu.HelpNamespace = "C:\\Users\\Ruthen\\Documents\\GitHub\\r19037\\gymAdmin1.3\\gymAdmin\\Clanarine\\HelpUrediC" +
+    "lanarinu.html";
+            // 
             // UrediClanarinu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +176,7 @@
             this.ClientSize = new System.Drawing.Size(284, 362);
             this.Controls.Add(this.PanelNovaClanarina);
             this.Name = "UrediClanarinu";
+            this.HelpUrediClanarinu.SetShowHelp(this, true);
             this.Text = "UrediClanarinu";
             this.Load += new System.EventHandler(this.UrediClanarinu_Load_1);
             this.PanelNovaClanarina.ResumeLayout(false);
@@ -191,5 +198,6 @@
         private System.Windows.Forms.Label LabelCijenaNovaClanarina;
         private System.Windows.Forms.Label LabelTrajanjeNovaClanarina;
         private System.Windows.Forms.Label LabelNazivNovaClanarina;
+        private System.Windows.Forms.HelpProvider HelpUrediClanarinu;
     }
 }
