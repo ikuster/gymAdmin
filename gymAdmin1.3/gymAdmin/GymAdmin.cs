@@ -98,7 +98,7 @@ namespace gymAdmin
 
         private void BtnMjerenjaKlijenti_Click(object sender, EventArgs e)
         {
-            MjerenjaKlijenta formMjerenja = new MjerenjaKlijenta();
+            Mjerenja formMjerenja = new Mjerenja();
             formMjerenja.MojKlijent = getKlijent();
             formMjerenja.Show();
         }
